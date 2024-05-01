@@ -464,20 +464,19 @@
   <h1>Linear Algebra</h1>
 
 <h3 id="problem1">Problem1</h3>
-<p>设 <span class="arithmatex">\(e_1,e_2,...,e_n\)</span>为<span class="arithmatex">\(V\)</span>的规范正交基,并设 <span class="arithmatex">\(v_1,...v_n\in V\)</span>,对 <span class="arithmatex">\(\forall j=1,2,...,n\)</span>,均有<span class="arithmatex">\(\lVert e_j-v_j\rVert&lt;\dfrac{1}{\sqrt{n}}\)</span>.证明：<span class="arithmatex">\(v_1,...v_n\)</span>为<span class="arithmatex">\(V\)</span>的基.
-</br></p>
+<p>设 <span class="arithmatex">\(e_1,e_2,...,e_n\)</span>为<span class="arithmatex">\(V\)</span>的规范正交基,并设 <span class="arithmatex">\(v_1,...v_n\in V\)</span>,对 <span class="arithmatex">\(\forall j=1,2,...,n\)</span>,均有<span class="arithmatex">\(\lVert e_j-v_j\rVert&lt;\dfrac{1}{\sqrt{n}}\)</span>.证明：<span class="arithmatex">\(v_1,...v_n\)</span>为<span class="arithmatex">\(V\)</span>的基.</p>
 <p><span class="arithmatex">\(proof:\)</span>  设 <span class="arithmatex">\(\sum_{i=1}^{n}a_iv_i=0,\)</span> 假设 <span class="arithmatex">\(\exist i\in{1,2,...,n},s.t. a_i \neq 0\)</span>.</p>
-<p>一方面, <span class="arithmatex">\(\lVert \sum_{i=1}^{n}a_i(e_i-v_i)\rVert ^2 = \lVert \sum_{i=1}^{n}a_ie_i\rVert ^2=\sum_{i=1}^{n} \lvert a_i\rvert^2\)</span>.
-另一方面, $\lVert \sum_{i=1}^{n}a_i(e_i-v_i)\rVert^2=\lang \sum_{i=1}^{n}a_i(e_i-v_i),\sum_{i=1}^{n}a_i(e_i-v_i) \rang $
-$=\sum_{i=1}^{n}\sum_{j=1}^{n} \lang a_i(e_i-v_i),a_j(e_j-v_j)\rang $
-<span class="arithmatex">\(\leqslant \sum_{i=1}^{n}\sum_{j=1}^{n}\lvert \lang a_i(e_i-v_i),a_j(e_j-v_j)\rang \rvert\)</span>
-<span class="arithmatex">\(\leqslant \sum_{i=1}^{n} \sum_{j=1}^{n} \lVert a_i(e_i-v_i)\rVert \lVert a_j(e_j-v_j)\rVert\)</span>
-<span class="arithmatex">\(=\sum_{i=1}^{n} \sum_{j=1}^{n} \lvert a_i\rvert \lvert a_j\rvert \lVert e_i-v_i\rVert \lVert e_j-v_j\rVert\)</span>
-<span class="arithmatex">\(&lt;\dfrac{1}{n}\sum_{i=1}^{n} \sum_{j=1}^{n} \lvert a_i\rvert \lvert a_j\rvert=\dfrac{1}{n} (\sum_{i=1}^{n} \lvert a_i\rvert)^2\)</span>
-$ \leqslant \sum_{i=1}^{n} \lvert a_i \rvert^2.$
-从而得到 <span class="arithmatex">\(\sum_{i=1}^{n} \lvert a_i\rvert^2&lt;\sum_{i=1}^{n} \lvert a_i\rvert^2\)</span>,矛盾.
-故对 <span class="arithmatex">\(\forall i \in {1,2,...,n},a_i=0.\)</span>
-从而 <span class="arithmatex">\(v_1,v_2,...v_n\)</span> 线性无关,它们构成<span class="arithmatex">\(V\)</span>的基.</p>
+<p>一方面, <span class="arithmatex">\(\lVert \sum_{i=1}^{n}a_i(e_i-v_i)\rVert ^2 = \lVert \sum_{i=1}^{n}a_ie_i\rVert ^2=\sum_{i=1}^{n} \lvert a_i\rvert^2\)</span>.</p>
+<p>另一方面, $\lVert \sum_{i=1}^{n}a_i(e_i-v_i)\rVert^2=\lang \sum_{i=1}^{n}a_i(e_i-v_i),\sum_{i=1}^{n}a_i(e_i-v_i) \rang $</p>
+<p>$=\sum_{i=1}^{n}\sum_{j=1}^{n} \lang a_i(e_i-v_i),a_j(e_j-v_j)\rang $</p>
+<p><span class="arithmatex">\(\leqslant \sum_{i=1}^{n}\sum_{j=1}^{n}\lvert \lang a_i(e_i-v_i),a_j(e_j-v_j)\rang \rvert\)</span></p>
+<p><span class="arithmatex">\(\leqslant \sum_{i=1}^{n} \sum_{j=1}^{n} \lVert a_i(e_i-v_i)\rVert \lVert a_j(e_j-v_j)\rVert\)</span></p>
+<p><span class="arithmatex">\(=\sum_{i=1}^{n} \sum_{j=1}^{n} \lvert a_i\rvert \lvert a_j\rvert \lVert e_i-v_i\rVert \lVert e_j-v_j\rVert\)</span></p>
+<p><span class="arithmatex">\(&lt;\dfrac{1}{n}\sum_{i=1}^{n} \sum_{j=1}^{n} \lvert a_i\rvert \lvert a_j\rvert=\dfrac{1}{n} (\sum_{i=1}^{n} \lvert a_i\rvert)^2\)</span></p>
+<p>$ \leqslant \sum_{i=1}^{n} \lvert a_i \rvert^2$.</p>
+<p>从而得到 <span class="arithmatex">\(\sum_{i=1}^{n} \lvert a_i\rvert^2&lt;\sum_{i=1}^{n} \lvert a_i\rvert^2\)</span>,矛盾.</p>
+<p>故对 <span class="arithmatex">\(\forall i \in {1,2,...,n},a_i=0.\)</span></p>
+<p>从而 <span class="arithmatex">\(v_1,v_2,...v_n\)</span> 线性无关,它们构成<span class="arithmatex">\(V\)</span>的基.</p>
 
 
 
