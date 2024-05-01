@@ -1,0 +1,2012 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>FPA - Qyadratic Reciprocity</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#some-points-in-c-programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Qyadratic Reciprocity" class="md-header__button md-logo" aria-label="Qyadratic Reciprocity" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Qyadratic Reciprocity
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FPA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Qyadratic Reciprocity" class="md-nav__button md-logo" aria-label="Qyadratic Reciprocity" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Qyadratic Reciprocity
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homepage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Note
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Note
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    FPA
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    FPA
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-points-in-c-programming" class="md-nav__link">
+    Some points in C Programming
+  </a>
+  
+    <nav class="md-nav" aria-label="Some points in C Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#week1" class="md-nav__link">
+    Week1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week3" class="md-nav__link">
+    Week3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week4" class="md-nav__link">
+    Week4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week5" class="md-nav__link">
+    Week5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week6" class="md-nav__link">
+    Week6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week10" class="md-nav__link">
+    Week10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week11" class="md-nav__link">
+    Week11
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week14" class="md-nav__link">
+    Week14
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week15" class="md-nav__link">
+    Week15
+  </a>
+  
+    <nav class="md-nav" aria-label="Week15">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fopen" class="md-nav__link">
+    fopen
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resizable-array" class="md-nav__link">
+    Resizable array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-array" class="md-nav__link">
+    Linked Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-list" class="md-nav__link">
+    Linked List
+  </a>
+  
+    <nav class="md-nav" aria-label="Linked List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    杂项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-operator-precedence" class="md-nav__link">
+    About operator precedence
+  </a>
+  
+    <nav class="md-nav" aria-label="About operator precedence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-escape-char" class="md-nav__link">
+    About escape char
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-common-c-keywords" class="md-nav__link">
+    Some Common C Keywords
+  </a>
+  
+    <nav class="md-nav" aria-label="Some Common C Keywords">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    translation:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#several-tiny-points" class="md-nav__link">
+    several tiny points:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-points-in-c-programming" class="md-nav__link">
+    Some points in C Programming
+  </a>
+  
+    <nav class="md-nav" aria-label="Some points in C Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#week1" class="md-nav__link">
+    Week1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week3" class="md-nav__link">
+    Week3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week4" class="md-nav__link">
+    Week4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week5" class="md-nav__link">
+    Week5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week6" class="md-nav__link">
+    Week6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week10" class="md-nav__link">
+    Week10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week11" class="md-nav__link">
+    Week11
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week14" class="md-nav__link">
+    Week14
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week15" class="md-nav__link">
+    Week15
+  </a>
+  
+    <nav class="md-nav" aria-label="Week15">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fopen" class="md-nav__link">
+    fopen
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resizable-array" class="md-nav__link">
+    Resizable array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-array" class="md-nav__link">
+    Linked Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-list" class="md-nav__link">
+    Linked List
+  </a>
+  
+    <nav class="md-nav" aria-label="Linked List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    杂项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-operator-precedence" class="md-nav__link">
+    About operator precedence
+  </a>
+  
+    <nav class="md-nav" aria-label="About operator precedence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-escape-char" class="md-nav__link">
+    About escape char
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-common-c-keywords" class="md-nav__link">
+    Some Common C Keywords
+  </a>
+  
+    <nav class="md-nav" aria-label="Some Common C Keywords">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    translation:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#several-tiny-points" class="md-nav__link">
+    several tiny points:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>FPA</h1>
+
+<h2 id="some-points-in-c-programming">Some points in C Programming</h2>
+<h3 id="week1">Week1</h3>
+<p>P1.C语言的标识符由字母、数字和其他任意字符组成。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F.应当由字母、数字和下划线组成，其中首字符不能为下划线。实际运行中，包含 $ 的标识符(identifier) 也可以编译通过。在这样的标识符中，$ 字符也可以作为首字符。
+</details>
+<p><br/>
+P2.</p>
+<pre><code>int n=5,x;
+x=n++;
+the value of x will be 5. (T/F)
+</code></pre>
+<details>
+<summary>answer & analysis</summary>
+T.n变为6实际上是n++的side effect，在此之前已经将n的值赋给x。
+</details>
+<p><br/>
+P3.</p>
+<pre><code>int k=2;
+while (k=0){
+    printf("%d",k);
+    k--;
+}
+</code></pre>
+<p>while循环执行()次。</p>
+<details>
+<summary>answer & analysis</summary>
+0.while (k=0)中条件表达式值为0，while循环不执行。（若改为while (k=1)，则为无限循环。）
+</details>
+<p><br/></p>
+<p><br/></p>
+<h3 id="week3">Week3</h3>
+<p>P1.The following text is part of error information threw by the compiler when compiling some buggy C program.
+<strong>Id:symbol(s) not found for architecrture x86-64
+clang:error:linker command failed with exit code 1</strong>
+Which of the following problems exist in the C program is related to the information?
+A.Some variable is used without definition.
+B.A neccessary semicolon ';' is missing.
+C.The program does not include the header file <strong>stdio.h</strong> but uses function <strong>printf</strong>.
+D.The only function in the program is named <strong>mian</strong>.</p>
+<details>
+<summary>answer & analysis</summary>
+D.链接器会默认以名字为main的函数作为入口，则此时链接器会因为找不到main函数而出错。（事实上编译器不报错。）
+</details>
+<p><br/></p>
+<p>P2.对于定义int a[5];可以通过语句scanf("%d",a);输入全部元素的值。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F.这不同于char a[5]。
+</details>
+<p><br/></p>
+<p>P3.以下代码，语法正确的是：</p>
+<pre><code>A.while ( ) ;
+B.for ( ) ;
+C.for (;;) ;
+D.do { } while ( );
+</code></pre>
+<details>
+<summary>answer & analysis</summary>
+C.";"是一个空语句。
+</details>
+
+<p><br/>
+<br/></p>
+<h3 id="week4">Week4</h3>
+<p>P1.sizeof()是C语言的一个函数，可以计算参量所占内存的字节数。如sizeof(int)可计算整型所占的字节数。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F.sizeof是关键字而不是函数。sizeof的两种用法：sizeof (类型)、sizeof 表达式。
+</details>
+<p><br/></p>
+<p>P2.C语言中，通过函数调用只能获得一个返回值。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F.函数调用获得的返回值为0或1个。
+</details>
+<p><br/></p>
+<p>P3.在C语言程序中，若对函数类型未加显式说明，则函数的隐含类型为（）。</p>
+<pre><code>A.void
+B.double
+C.char
+D.int
+</code></pre>
+<details>
+<summary>answer & analysis</summary>
+D.
+</details>
+
+<p><br/>
+<br/></p>
+<h3 id="week5">Week5</h3>
+<p>P1.以下说法正确的是：</p>
+<pre><code>A.一个C语言（源文件.c文件）必须包含main函数
+B.一个C语言源文件（.c文件）可以包含两个以上main函数
+C.C语言头文件（.h文件）和源文件（.c文件）都可以进行编译
+D.在一个可以正确执行的C语言程序中，一个C语言函数的声明（原型）可以出现任意多次。
+</code></pre>
+<details>
+<summary>answer & analysis</summary>
+C.这题可能错选A，事实上多文件编程时，只需要一个.c文件包含main函数即可。
+</details>
+
+<p><br/></p>
+<h3 id="week6">Week6</h3>
+<p>P1.Among the following C code segments,which one generates the following error when compiling?
+<strong>error:implicit declaration of funciton is invalid in C99</strong></p>
+<p>A.</p>
+<pre><code>int my_pow(int a,int b)
+int main()
+{
+    int a = my_pow(2,6);
+}
+</code></pre>
+<p>B.</p>
+<pre><code>int my_pow(int a,int b) {}
+int main()
+{
+    int a = my_pow(2,6);
+}
+</code></pre>
+<p>C.</p>
+<pre><code>int main()
+{
+    int a = my_pow(2,6);
+}
+int my_pow(int a,int b) {}
+</code></pre>
+<p>D.</p>
+<pre><code>int my_pow(int a,int b);
+int main()
+{
+    int a = my_pow(2,6);
+}
+int my_pow(int a,int b) {}
+</code></pre>
+<details>
+<summary>answer & analysis</summary>
+C.在C语言中，当调用一个在调用时尚未被声明的函数时，编译器会给出implicit declaration of function的error报错，属于编译阶段错误，只有C项符合在调用时尚未声明；当某个被调用的函数只有声明没有定义时会给出Undefined symbols、symbol(s) not found等error报错，但这种报错本质是链接错误(linker command failed with exit code 1)，是在编译完成后链接阶段的错误，A项会报此错；当某个返回值类型不为void的函数没有返回值时，编译器一般之报warning或者不报错，不会报error。如果调用了该函数并取得返回值，一般取得一个不确定值，B、D项会出现这种情况。
+</details>
+
+<p><br/></p>
+<p>P2.Among these definition of 2-d arrays,which is/are correct?
+A.int a[1][2];
+B.int a[][2];
+C.int a[][2] = {0};
+D.int a[][2] = {0,1,2,3,4};
+E.int a[][2] = {{0,1},{2,3},};
+F.int a[2][] = {{0,1},{2,3}};</p>
+<details>
+<summary>answer & analysis</summary>
+ACDE.
+A项创建一个1*2的二维数组，没问题；
+
+B项创建的数组大小未知，不能通过编译；
+C、D项创建一个2列（第一维）若干行（第二维）的二维数组，行数由初始化时给定的元素个数决定，未填满的元素填0，没问题；
+E项是正常的二维数组初始化方式，末尾的逗号无关紧要，没问题；
+F项没有确定数组第一维的大小，不能通过编译。
+</details>
+<p><br/></p>
+<h3 id="week10">Week10</h3>
+<p>Some points:
+1.Array as a parameter is pointer.But it can be used with operator[],which makes it look like an array.So the four prototypes below are equal:</p>
+<pre><code>int sum(int *a,int n);
+int sum(int *,int n);
+int sum(int a[],int n);
+int sum(int [],int n);
+</code></pre>
+<p><br/>
+2.Array variable is const pointer,that's why it cannot be assigned.
+<br/>
+P1.关于C语言指针的运算：指针只有加减操作，没有乘除操作。指针可以加常数、减常数；相同类型的指针可以相加、相减。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F.相同类型的指针可以做减法表示他们的距离，而相加没有意义。
+</details>
+<p><br/></p>
+<p>P2.假设有定义如下： int array[10]; 则该语句定义了一个数组array。其中array的类型是整型指针（即： int *）。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F.array的类型是数组名。注意array存储的是array[0]的地址，array代表的是整个数组，因此&array和array虽然数值相同，但意义不同。(&array)+1会使地址向后移动40个Byte，而array+1只会移动4个Byte。
+<br/>
+另一种方法：考虑sizeof。sizeof(array)显然是40，而对于整型指针变量int *p,sizeof(p)=8.
+</details>
+<p><br/>
+P3.If variables are defined and assigned correctly, the expression ______ is wrong.</p>
+<p>A.a&amp;b
+B.a^b
+C.&amp;&amp;x
+D.a, b</p>
+<details>
+<summary>answer & analysis</summary>
+C. &x已经得到了x的地址，而(&x)是直接访问到的，并没有存储在某个变量中，所以&(&x)的操作是无效的。
+</details>
+<p><br/>
+P4.According to the declaration: int a[10], *p=a; the expression __ is wrong.</p>
+<p>A.a[9]
+B.p[5]
+C.*p++
+D.a++</p>
+<details>
+<summary>answer & analysis</summary>
+D.数组名可以看作常量指针，不能进行++操作。
+</details>
+<p><br/>
+P5. Among the following assignments or initializations, __ is wrong.</p>
+<p>A.char str[10]; str="string";
+B.char str[]="string";
+C.char <em>p="string";
+D.char </em>p; p="string";</p>
+<details>
+<summary>answer & analysis</summary>
+A. 字符数组只能在定义时才能用字符串字面量初始化，定义后不行。字符串在被定义时和定义后都能这么干。
+</details>
+<p><br/></p>
+<p>P6. According to the declaration: int (*p)[10];, p is a(n) __.
+A.pointer
+B.array
+C.function
+D.element of array</p>
+<details>
+<summary>answer & analysis</summary>
+A.p是一个指针，指向若干长度为10的一维数组。
+</details>
+<p><br/>
+P7.Among the following statements, __ is equivalent to the declaration: int *p[4];.</p>
+<p>A.int  p[4];
+B.int  <em><em>p;
+C.int  </em>(p[4]);
+D.int  (</em>p)[4];</p>
+<details>
+<summary>answer & analysis</summary>
+C. []的优先级高于*。注意这里C、D选项的区别，前者是四个指针构成的指针数组，后者是指向长度为4的数组的指针。
+
+此外，int (*p)[4]的类型是(int *)[4],这与int **p不同。
+</details>
+<p><br/>
+P8.For the function declaration void f(char ** p)，the definition __ of var makes the function call f(var) incorrect。</p>
+<p>A.char var[10][10];
+B.char <em>var[10];
+C.void </em>var = NULL;
+D.char <em>v=NULL, </em>*var=&v;</p>
+<details>
+<summary>answer & analysis</summary>
+A。A 中 var 的类型是二维数组，传参时的类型为 (*char)[10]，虽然是个 ( 数组 / 行 ) 指针，但并不是二重指针。这是因为传参时的隐式转化只能转化一层，因此一维数组传参时完全等价于 const 指针，但是二维数组就无法等价于二重指针。
+
+另外 *var 确实代表 var[0] 这个数组，**var 也确实就是 var[0][0]，但是注意这里的 * 是运算符而不是类型定义。作为类型定义时，数组和指针是需要区分的。
+
+B 中 var 的类型是指针数组，但是由于数组隐式转化的问题，其传参时表现出来的类型就是 char**，因此是正确的。
+
+C 中 var 的类型是无类型指针，它可以指向任何东西。如果它指向的是一个 char*，那么它就符合 char** 的类型要求了，因此正确。
+
+D 中 var 的类型是正统的 char**。
+</details>
+<p><br/>
+P9.对于以下变量定义，正确的赋值是（）。</p>
+<p>char <em>pc[5], s[10];
+A.pc = s
+B.</em>pc = s[0]
+C.<em>pc = s
+D.</em>pc = &amp;s</p>
+<details>
+<summary>answer & analysis</summary>
+C.首先pc是一个指针数组，A显然错误。*pc相当于pc[0],B右边的s[0]是一个字符，不能给pc[0]（字符串）；D中&s是整个字符数组的地址，如果储存起来就是(char *)[10]，也不能赋给pc[0]；C中的s是字符数组，传递时隐式转换成char *，可以赋给pc[0].
+</details>
+<p><br/></p>
+<h3 id="week11">Week11</h3>
+<p>Some points:
+1.char <em>s = "Hello world!"中，s是一个指针，初始化为指向一个字符串常量，所以s实际上是const char </em>s，但由于历史原因编译器接受不带const的写法。（但是试图对s所指的字符串做写入会导致严重后果。）如果要修改字符串，则应写成数组char s[] = "Hello World!"。
+<br/>
+2.String Functions in the Standard Library
+strlen:</p>
+<pre><code>size_t strlen(const char *s)
+</code></pre>
+<p>return the length of a string('\0' not included)
+<br/>
+strcmp:</p>
+<pre><code>int strcmp(const char *s1,const char *s2);
+</code></pre>
+<p>compare two strings,return:</p>
+<pre><code>0 : s1 == s2
+&gt;0 ：s1 &gt; s2
+&lt;0 : s1 &lt; s2
+</code></pre>
+<p><br/>
+strcpy</p>
+<pre><code>char *strcpy(char *restrict dst,const char *restrict stc);
+</code></pre>
+<p>把src的字符串拷贝到dst，restrict表明src和dst不重叠（C99），返回dst（链起代码）
+<br/>
+strcat</p>
+<pre><code>char *strcat(char *restrict s1,const char *restrict s2);
+</code></pre>
+<p>把s2拷贝到s1后面，接成一个长字符串，返回s1。
+<br/>
+strchr/strrchr</p>
+<pre><code>char *strchr(const char *s,int c);
+char *strrchr(const char *s,int c);
+</code></pre>
+<p>在字符串中找字符，返回NULL表示没有找到。
+<br/>
+strstr/strcasestr</p>
+<pre><code>char *strstr(const char *s1,const char *s2);
+char *strcasestr(const char *s1,const char *s2);
+</code></pre>
+<p>在字符串中找字符串。
+<br/>
+<br/>
+P1.不同类型的指针变量是可以直接相互赋值的。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F.会报错，一般需要强制转换。
+但也有例外，如void*是可以直接赋值给其他指针的。
+</details>
+<p><br/></p>
+<p>P2.两个任意类型的指针可以使用关系运算符比较大小。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F.同类型的指针能用关系运算符比较大小，不同类型的指针则不能。
+</details>
+<p><br/></p>
+<p>P3.以下哪个定义中的p不是指针，请选择恰当的选项：</p>
+<p>A.char <em><em>p;
+B.char (</em>p)[10];
+C.char </em>p[6];
+D.给出的三项中，p都是指针</p>
+<details>
+<summary>answer & analysis</summary>
+C.char *p[6]是指针数组。
+</details>
+<p><br/>
+P4.若有定义char <em>str[]={“Python”, “SQL”, “JAVA”, “PHP”, “C++”};则表达式</em>str[1] &gt; *str[3]比较的是：</p>
+<p>A.字符P和字符J
+B.字符串SQL和字符串PHP
+C.字符串Python和字符串JAVA
+D.字符S和字符P</p>
+<details>
+<summary>answer & analysis</summary>
+D. 注意[]的优先级高于*，而str[1]指向"SQL"的首地址，解应用得到字符S，同理*str[3]得到字符P。
+</details>
+<p><br/></p>
+<p><br/></p>
+<h3 id="week14">Week14</h3>
+<p>1.在全局变量前加上static就使得它称为只能在所在编译单元中被使用的全局变量（静态变量）。类似地，在函数前面加上static就使得它成为只能在所在编译单元中被使用的函数（静态函数）。
+<br/>
+2.关于声明和定义：声明是不产生代码的东西，包括函数原型、变量声明、结构声明、宏声明、枚举声明、类型声明、inline函数等；而定义是产生代码的东西。下面是几个声明的例子：</p>
+<pre><code>函数原型声明：int func(int a,int b);
+变量声明：extern int a;（声明一个整型全局变量）
+枚举声明：enum num｛one = 1,two,three｝;
+</code></pre>
+<p><br/>
+3.标准头文件结构：</p>
+<pre><code>#ifndef __A_H__
+#define __A_H__
+...
+#endif
+</code></pre>
+<p>运用条件编译宏，保证这个头文件在一个编译单元中只会被#include一次。
+<br/>
+4.前向声明：</p>
+<pre><code>struct Node;
+typedef struct _list
+{
+    Node *head;
+    Node *tail;
+}
+</code></pre>
+<p>这里不需要具体知道Node是怎样的，所以可以用struct Node来告诉编译器Node是一个结构.
+<br/>
+<br/></p>
+<p>P1.静态局部变量如果没有赋值，其存储单元中将是随机值。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F. 静态局部变量如果没有显式初始化，会被程序自动初始化为0（对数值型变量）或空字符（对字符型变量）。
+</details>
+<p><br/>
+P2.C语言中定义的静态变量存放在栈区，动态分配的内存空间位于堆区。(T/F)</p>
+<details>
+<summary>answer & analysis</summary>
+F. 常见的内存分区及存储内容：
+
+>代码区：存放程序的代码（即CPU执行的机器指令），只读。
+常量区：存放常量（如字符串字面量）。
+静态区（全局区）：静态变量和全局变量的存储趋于是一起的，一旦静态区的内存被分配，静态区的内存知道程序全部结束之后才会被释放。
+堆区：调用malloc函数申请的动态空间。
+栈区：存放函数内的局部变量、形参和函数返回值。栈区里的数据作用范围过了之后，系统会回收自动管理栈区的内存。
+
+</details>
+<p>P3.C语言的全局变量初始化是在以下哪个阶段完成的：</p>
+<p>A.main()函数开始后
+B.编译链接的时候
+C.main()函数开始前
+D.第一次用到的时候</p>
+<details>
+<summary>answer & analysis</summary>
+C. C语言的全局变量初始化是在main()函数开始前完成的。
+</details>
+<p><br/>
+<br/></p>
+<h3 id="week15">Week15</h3>
+<p>1.格式化的输入输出：
+·printf</p>
+<blockquote>
+<p>%[flags][width][.prec][hIL]type</p>
+</blockquote>
+<p>·scanf</p>
+<blockquote>
+<p>%[flag]type</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>flag</th>
+<th style="text-align: center;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td style="text-align: center;">左对齐</td>
+</tr>
+<tr>
+<td>+</td>
+<td style="text-align: center;">在前面放+或-</td>
+</tr>
+<tr>
+<td>(space)</td>
+<td style="text-align: center;">正数留空</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align: center;">0填充</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<table>
+<thead>
+<tr>
+<th>width或prec</th>
+<th style="text-align: center;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td style="text-align: center;">最小字符数</td>
+</tr>
+<tr>
+<td>*</td>
+<td style="text-align: center;">下一个参数是字符数</td>
+</tr>
+<tr>
+<td>.number</td>
+<td style="text-align: center;">小数点后的位数</td>
+</tr>
+<tr>
+<td>.*</td>
+<td style="text-align: center;">下一个参数是小数点后的位数</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<table>
+<thead>
+<tr>
+<th>类型修饰</th>
+<th style="text-align: left;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hh</td>
+<td style="text-align: left;">单个字节</td>
+</tr>
+<tr>
+<td>h</td>
+<td style="text-align: left;">short</td>
+</tr>
+<tr>
+<td>l</td>
+<td style="text-align: left;">long</td>
+</tr>
+<tr>
+<td>ll</td>
+<td style="text-align: left;">long long</td>
+</tr>
+<tr>
+<td>L</td>
+<td style="text-align: left;">long double</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th style="text-align: left;">用于</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">用于</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i或d</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">g</td>
+<td style="text-align: left;">float</td>
+</tr>
+<tr>
+<td>u</td>
+<td style="text-align: left;">unsigned</td>
+<td style="text-align: left;">G</td>
+<td style="text-align: left;">float</td>
+</tr>
+<tr>
+<td>o</td>
+<td style="text-align: left;">八进制</td>
+<td style="text-align: left;">a或A</td>
+<td style="text-align: left;">十六进制浮点</td>
+</tr>
+<tr>
+<td>x</td>
+<td style="text-align: left;">十六进制</td>
+<td style="text-align: left;">c</td>
+<td style="text-align: left;">char</td>
+</tr>
+<tr>
+<td>X</td>
+<td style="text-align: left;">字母大写的十六进制</td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">字符串</td>
+</tr>
+<tr>
+<td>f或F</td>
+<td style="text-align: left;">float，6</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">指针</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong>scanf:%[flag]type</strong></p>
+<table>
+<thead>
+<tr>
+<th>flag</th>
+<th style="text-align: left;">含义</th>
+<th style="text-align: left;">flag</th>
+<th style="text-align: left;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td style="text-align: left;">跳过</td>
+<td style="text-align: left;">l</td>
+<td style="text-align: left;">long,double</td>
+</tr>
+<tr>
+<td>数字</td>
+<td style="text-align: left;">最大字符数</td>
+<td style="text-align: left;">ll</td>
+<td style="text-align: left;">long long</td>
+</tr>
+<tr>
+<td>hh</td>
+<td style="text-align: left;">char</td>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">long double</td>
+</tr>
+<tr>
+<td>h</td>
+<td style="text-align: left;">short</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>scanf:%[flag]type</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th style="text-align: left;">用于</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: left;">用于</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">s</td>
+<td style="text-align: left;">字符串(单词)</td>
+</tr>
+<tr>
+<td>i</td>
+<td style="text-align: left;">整数，可能为十六进制或八进制</td>
+<td style="text-align: left;">[...]</td>
+<td style="text-align: left;">所允许的字符</td>
+</tr>
+<tr>
+<td>u</td>
+<td style="text-align: left;">unsigned int</td>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">指针</td>
+</tr>
+<tr>
+<td>o</td>
+<td style="text-align: left;">八进制</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">十六进制</td>
+</tr>
+<tr>
+<td>a,e,f,g</td>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;">c</td>
+<td style="text-align: left;">char</td>
+</tr>
+</tbody>
+</table>
+<p>注意printf和scanf的返回值：
+·读入的项目数
+·输出的字符数</p>
+<p>2.file</p>
+<blockquote>
+<p><strong>·</strong> FIlE <em>fopen(const char</em> restrict path,const char<em> restrict mode);
+</em><em>·</em><em> int fclose(FILE</em> stream);
+<strong>·</strong> fscanf(FILE<em>,...)
+</em><em>·</em><em> fprintf(FILE</em>,..)</p>
+</blockquote>
+<p>打开文件的标准代码：</p>
+<pre><code>FILE *fp = fopen("file","r");
+if (fp)
+{
+    fscanf(fp,...);
+    fclose(fp);
+}
+else
+{
+    ...
+}
+</code></pre>
+<h4 id="fopen">fopen</h4>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th style="text-align: left;">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td style="text-align: left;">打开只读</td>
+</tr>
+<tr>
+<td>r+</td>
+<td style="text-align: left;">打开读写，从文件头开始</td>
+</tr>
+<tr>
+<td>w</td>
+<td style="text-align: left;">打开只写。如果不存在则新建，如果存在则清空</td>
+</tr>
+<tr>
+<td>w+</td>
+<td style="text-align: left;">打开读写。如果不存在则新建，如果存在则清空</td>
+</tr>
+<tr>
+<td>a</td>
+<td style="text-align: left;">打开追加。如果不存在则新建，如果存在则从文件尾开始</td>
+</tr>
+<tr>
+<td>..x</td>
+<td style="text-align: left;">只新建，如果文件已存在则不能打开</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+P1.以下代码的输出为____.</p>
+<pre><code>int x = -1;
+printf("%d",(unsigned int)x);
+</code></pre>
+<details>
+<summary>answer & analysis</summary>
+-1. unsigned int的转换只是以无符号的方式来理解数据，并不会改变x的二进制值。对于printf来说，它要输出的是%d（有符号数），所以输出时仍当作有符号整型来理解。
+</details>
+
+<p><br/>
+P2.以下代码的输出为_____.</p>
+<pre><code> char str[100] = "ZhejiangU 1 3 5",s[10];
+ int n;
+ sscanf(str,"%s %*d %d %*d",s,&amp;n);
+ printf("%s",&amp;s[n]);
+</code></pre>
+<details>
+<summary>answer & analysis</summary>
+jiangU. %*d表示读取的是一个整型，但是直接忽略，不存到变量中。所以sscanf读取到的n是第二个数字3，然后输出s[3]开始的字符串，即jiangU.
+</details>
+
+<h2 id="resizable-array">Resizable array</h2>
+<p>Definition:</p>
+<pre><code>typedef struct
+{
+    int *array;
+    int size;
+}Array;
+</code></pre>
+<p>array_create:</p>
+<pre><code>Array array_create(int init_size)
+{
+    Array a;
+    a.array = (int *)malloc(sizeof(int) * init_size);
+    a.size = init_size;
+    return a;
+}
+</code></pre>
+<p>array_free:</p>
+<pre><code>void array_free(Array *a)
+{
+    free(a-&gt;array);
+    a-&gt;array = NULL;
+    a-&gt;size = 0;
+}
+</code></pre>
+<p>array_size:</p>
+<pre><code>int array_size(const Array *a)
+{
+    return a-&gt;size;
+}
+</code></pre>
+<p>array_at(the first index is 0):</p>
+<pre><code>int *array_at(Array *a,int index)
+{
+    if (index &gt;= a-&gt;size)
+    {
+        array_inflate(a,index - a-&gt;size);
+    }
+    return &amp;(a-&gt;array[index]);
+}
+</code></pre>
+<p>array_inflate</p>
+<pre><code>void array_inflate(Array *a,int more_size)
+{
+    int *p = (int *)malloc(sizeof(int) * (a-&gt;size + more_size));
+    for (int i=0;i&lt;a-&gt;size;i++) p[i] = a-&gt;array[i];
+      //or:memcpy((void *)p,(void *)a-&gt;array,a-&gt;size*sizeof(int));
+    free(a-&gt;array); 
+    a-&gt;array = p;
+    a-&gt;size = a-&gt;size + more_size;
+}
+</code></pre>
+<p><br/></p>
+<h2 id="linked-array">Linked Array</h2>
+<p>Definition:</p>
+<pre><code>typedef struct _array
+{
+    int *array;
+    int size;
+    struct _array *next;
+}Array;
+</code></pre>
+<p>array_create:</p>
+<pre><code>Array array_create()
+{
+    Array a;
+    a.array = (int *)malloc(sizeof(int) * BLOCK_SIZE);
+    a.size = BLOCK_SIZE;
+    a.next = 0;
+    return a;
+}
+</code></pre>
+<p>array_free:</p>
+<pre><code>void array_free(Array *a)
+{
+    free(a-&gt;array);
+    a-&gt;size = 0;
+    if (a-&gt;next)
+    {
+        array_free(a-&gt;next);
+        free(a-&gt;next);
+    }
+}
+</code></pre>
+<p>array_size:</p>
+<pre><code>int array_size(Array *a)
+{
+    if (a-&gt;next == NULL)
+    {
+        return a-&gt;size;
+    }
+    else
+    {
+        return a-&gt;size + array_size(a-&gt;next);
+    }
+}
+</code></pre>
+<p>array_at:</p>
+<pre><code>int *array_at(Array *a,int index)
+{
+    if (index &lt; a-&gt;size)
+    {
+        return &amp;(a-&gt;array[index]);
+    }
+    else
+    {
+        return array_at(a-&gt;next,index - a-&gt;size);
+    }
+}
+</code></pre>
+<p>array_inflate:</p>
+<pre><code>void array_inflate(Array *a)
+{
+    Array new_array;
+    new_array-&gt;array = (int *)malloc(sizeof(int) * BLOCK_SIZE);
+    new_array-&gt;size = BLOCK_SIZE;
+    new_array-&gt;next = 0;
+    for (Array pre = a;pre-&gt;next;pre = pre-&gt;next) ;
+    pre-&gt;next = &amp;new_array;
+}
+</code></pre>
+<p><br/></p>
+<h2 id="linked-list">Linked List</h2>
+<p>defintion:</p>
+<pre><code>typedef struct _node
+{
+    int value;
+    struct _node *next;
+    struct _node *prev;
+}Node;
+typedef struct
+{
+    Node *head;
+    Node *tail;
+}List;
+</code></pre>
+<p>list_create:</p>
+<pre><code>List *list_create()
+{
+    List *list = malloc(sizeof(List));
+    list-&gt;head = NULL;
+    list-&gt;tail = NULL;
+    return list;
+}
+</code></pre>
+<p>insert_head:</p>
+<pre><code>void insert_head(List *list,int value)
+{
+    Node *node = malloc(sizeof(Node));
+    node-&gt;value = val;
+    node-&gt;prev = NULL;
+    if (list-&gt;head)
+    {
+        node-&gt;next = list-&gt;head;
+        list-&gt;head-&gt;prev = node;
+        list-&gt;head = node;
+    }
+    else
+    {
+        node-&gt;next = node-&gt;prev = NULL;
+        list-&gt;head = list-&gt;tail = node;
+    }
+}
+</code></pre>
+<p>append_tail:</p>
+<pre><code>void append_tail(List *list,int val)
+{
+    Node *node = malloc(sizeof(Node));
+    node-&gt;value = val;
+    node-&gt;next = NULL;
+    if (list-&gt;tail)
+    {
+        node-&gt;prev = list-&gt;tail;
+        list-&gt;tail-&gt;next = node;
+        list-&gt;tail = node;
+    }
+    else
+    {
+        node-&gt;prev = NULL;
+        list-&gt;head = list-&gt;tail = node;
+    }
+}
+</code></pre>
+<p>insert_middle:</p>
+<pre><code>void insert_middle(List *list,int index,int val)
+{
+    int cnt = 1;
+    Node *p = list-&gt;head;
+    for (;cnt&lt;index &amp;&amp; p;p = p-&gt;next,cnt++) ;
+    Node *node = malloc(sizeof(Node));
+    node-&gt;value = val;
+    node-&gt;prev = p;
+    node-&gt;next = p-&gt;next;
+    p-&gt;next-&gt;prev = node;
+    p-&gt;next = node;
+}
+</code></pre>
+<p>remove:</p>
+<pre><code>void remove_node(List *list,int val)
+{
+    Node *p = list-&gt;head;
+    for (;p;)
+    {
+        if (p-&gt;value == val)
+        {
+            if (list-&gt;head == p)
+            {
+                list-&gt;head = p-&gt;next;
+                if (list-&gt;tail == p)
+                {
+                    list-&gt;tail = NULL;
+                }
+                Node *tmp = p;
+                p = p-&gt;next;
+                free(tmp);
+            }
+            else if (list-&gt;tail == p)
+            {
+                list-&gt;tail = p-&gt;prev;
+                p-&gt;prev-&gt;next = NULL;
+                free(p);
+                break;
+            }
+            else
+            {
+                p-&gt;prev-&gt;next = p-&gt;next;
+                p-&gt;next-&gt;prev = p-&gt;prev;
+                Node *tmp = p;
+                p = p-&gt;next;
+                free(tmp);
+            }
+        }
+        else p = p-&gt;next;
+    }
+}
+</code></pre>
+<p>traversal:</p>
+<pre><code>void traversal(List *list)
+{
+    for (Node *p = list-&gt;head;p;p = p-&gt;next)
+        ...
+}
+</code></pre>
+<p>search:</p>
+<pre><code>int search(List *list,int val)
+{
+    int index = 1;
+    for (Node *p = list-&gt;head;p;p = p-&gt;next,index++)
+        if (p-&gt;value == val)
+        {
+            return index;
+        }
+    return -1;
+}
+</code></pre>
+<p>free:</p>
+<pre><code>void list_free(List *list)
+{
+    for (Node *p = list-&gt;head;p;)
+    {
+        Node *tmp = p;
+        p = p-&gt;next;
+        free(tmp);
+    }
+    list-&gt;head = list-&gt;tail = NULL;
+    free(list);
+}
+</code></pre>
+<p><br/>
+<br/></p>
+<h3 id="_1">杂项</h3>
+<p>1.关于字符串长度：字符串中出现\ddd时可能为八进制转义字符，取决于后续是否为合法的八进制，以\开始，最少1位，最多3位。此外应注意strlen和sizeof的区别。
+examples:</p>
+<pre><code>char str[] = "hello\61234";
+printf("%s\n",str);
+printf("%d %d\n",strlen(str),sizeof(str));
+
+output:
+hello1234
+9 10
+
+
+
+char str[] = "123\029\08";
+printf("%d %d\n,strlen(str),sizeof(str));
+
+output:5 8
+</code></pre>
+<p><br/></p>
+<p>2.关于sizeof问题：</p>
+<blockquote>
+<p>（1）sizeof是C语言中的一个运算符（而非函数！），它的作用是查询占据的空间字节数。
+常见的类型及其所占的字节数:
+(unsigned)char(1 Byte),
+(unsigned) short(2 Byte),
+(unsigned) int(4 Byte(64bit)),
+(unsigned) long(4 Byte),
+(unsigned) long long(8 Byte),
+float(4 Byte),long double(16 Byte(64bit)),
+pointer(8 Byte(64bit)).
+（2）sizeof后的操作数可以是一个表达式或者括在括号里的类型名，且会忽略括号里的各种运算。
+（3）sizeof的两种用法：
+sizeof unary-expression
+sizeof (type-name)</p>
+</blockquote>
+<p>An example:</p>
+<pre><code>char ch = 'a';
+printf("%lu\n",sizeof(ch));
+printf("%lu\n",sizeof(ch + 1));
+printf("%lu\n",sizeof('a'));
+
+output:
+1
+4
+4 ('a'是字符常量，被看成int类型)
+</code></pre>
+<p><br/></p>
+<p>3.关于运算符",":逗号运算符会顺序执行一系列运算。整个逗号表达式的值是以逗号分隔的列表中最后一个表达式的值。
+<br/></p>
+<p>4.相同类型的指针相减结果为两指针之间差了多少单位距离，而不是指针的值相减。下面是一个例子：</p>
+<pre><code>int a[] = {1,2,3,4,5};
+int *p = a,*q = &amp;a[2];
+printf("%lu\n",q - p);
+printf("%d\n",(int)&amp;a[2] - (int)a);
+
+
+output:
+2
+8
+</code></pre>
+<h3 id="about-operator-precedence">About operator precedence</h3>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th style="text-align: center;">运算符</th>
+<th style="text-align: right;">结合性/目数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">[]数组 ()</td>
+<td style="text-align: right;">/</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align: center;">-&gt;结构</td>
+<td style="text-align: right;">/</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">-取负 ++ --</td>
+<td style="text-align: right;">右/单</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">（类型）</td>
+<td style="text-align: right;">右</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">* &amp;指针/地址</td>
+<td style="text-align: right;">右/单</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">!非 ~按位反</td>
+<td style="text-align: right;">右/单</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">sizeof</td>
+<td style="text-align: right;">右</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">* / %</td>
+<td style="text-align: right;">/双</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">+ -</td>
+<td style="text-align: right;">/双</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: center;">&lt;&lt; &gt;&gt;</td>
+<td style="text-align: right;">/双</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align: center;">&gt;(=) &lt;(=)</td>
+<td style="text-align: right;">/双</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align: center;">== !=</td>
+<td style="text-align: right;">/双</td>
+</tr>
+<tr>
+<td>8/9/10</td>
+<td style="text-align: center;">&amp;/^/|位</td>
+<td style="text-align: right;">/双</td>
+</tr>
+<tr>
+<td>11/12</td>
+<td style="text-align: center;">&amp;&amp; ||</td>
+<td style="text-align: right;">/双</td>
+</tr>
+<tr>
+<td>13</td>
+<td style="text-align: center;">?:</td>
+<td style="text-align: right;">右/三</td>
+</tr>
+<tr>
+<td>14</td>
+<td style="text-align: center;">赋值</td>
+<td style="text-align: right;">右</td>
+</tr>
+<tr>
+<td>15</td>
+<td style="text-align: center;">,</td>
+<td style="text-align: right;">/</td>
+</tr>
+</tbody>
+</table>
+<p>单目&gt;双目
+<br/></p>
+<h4 id="about-escape-char">About escape char</h4>
+<table>
+<thead>
+<tr>
+<th>char</th>
+<th style="text-align: center;">meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\b</td>
+<td style="text-align: center;">back position</td>
+</tr>
+<tr>
+<td>\t</td>
+<td style="text-align: center;">next table stop</td>
+</tr>
+<tr>
+<td>\"</td>
+<td style="text-align: center;">double quote</td>
+</tr>
+<tr>
+<td>\'</td>
+<td style="text-align: center;">single quote</td>
+</tr>
+<tr>
+<td>\n</td>
+<td style="text-align: center;">new line</td>
+</tr>
+<tr>
+<td>\r</td>
+<td style="text-align: center;">return the carriage</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="some-common-c-keywords">Some Common C Keywords</h3>
+<p>auto 
+bool(C23)
+break
+case
+char
+const
+continue
+default
+do
+double
+else
+enum
+extern
+false(C23)
+float
+for
+goto
+if
+inline
+int
+long
+register
+return
+short
+signed
+sizeof
+static
+sturct
+switch
+true(C23)
+typedef
+union
+unsigned
+void
+while</p>
+<p>Pay attention:define and include are not keywords!</p>
+<p><br/>
+<br/>
+<br/>
+<br/></p>
+<h4 id="translation">translation:</h4>
+<p>adjacent相邻的
+argument参数（实参？）
+assignment operator（赋值运算符）
+binary二进制
+capital大写字母
+coefficient系数
+convert转换
+decimal十进制
+exponent指数
+hexadecimal十六进制
+mechanism机制
+octal八进制
+parameter参数（形参？）
+polynomial（多项式）
+prototype原型
+recursion递归
+scope范围
+string literal字符串字面量
+sub expression子表达式
+unary operator单目运算符</p>
+<p><br/>
+<br/></p>
+<h4 id="several-tiny-points"><em>several tiny points:</em></h4>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="../../../js/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
