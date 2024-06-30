@@ -444,31 +444,36 @@
 
   <h1>Abstract Algebra</h1>
 
-<h2 id="group">Group</h2>
-<p>!!! info Definition
-    A group is a set <span class="arithmatex">\(G\)</span> with a binary operation <span class="arithmatex">\(*\)</span>:<span class="arithmatex">\((a,b) \mapsto a*b\)</span>, satisfying:
-    1. <span class="arithmatex">\((a*b)*c=a*(b*c).\)</span> 
-    2. <span class="arithmatex">\(\exist\)</span> an element <span class="arithmatex">\(e \in G\)</span>, called the identity, <span class="arithmatex">\(s.t.e*a=a*e=a,\forall a \in G.\)</span>
-    3. For any <span class="arithmatex">\(a\in G\)</span>,<span class="arithmatex">\(\exist\)</span> <span class="arithmatex">\(a^{-1}\)</span>, called an inverse of <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(s.t.a*a^{-1}=a^{-1}*a=e\)</span> </p>
-<pre><code>If $a*b=b*a,\forall a,b\in G$,$G$ is called abelian or commutative.
-</code></pre>
-<p>!!! example
-    &#x2460; <span class="arithmatex">\((ℤ,+)\)</span> is an abelian group.The identity is <span class="arithmatex">\(0\)</span>.
-    &#x2461; <span class="arithmatex">\((V,+)\)</span> is an abelian group.(<span class="arithmatex">\(V\)</span> is vector space over <span class="arithmatex">\(F\)</span>)
-    &#x2462; <span class="arithmatex">\((ℤ/mℤ,+)\)</span> is a group.The identity is <span class="arithmatex">\(\overline{0}\)</span>.
-    &#x2463; Let <span class="arithmatex">\((G,*)\)</span> and <span class="arithmatex">\((H,\)</span> &#9702;<span class="arithmatex">\()\)</span> be groups.We define <span class="arithmatex">\((G\times H,\Delta):(g,h)\Delta(g',h')=(g*g',h\)</span> &#9702; <span class="arithmatex">\(h')\)</span>.It's a direct product of <span class="arithmatex">\(G\)</span> and <span class="arithmatex">\(H\)</span>, which is also a group.</p>
-<p>!!! info Basic Properties
-    Let <span class="arithmatex">\(G\)</span> be a group,
-    1. The identity <span class="arithmatex">\(e\)</span> is unique.<span class="arithmatex">\(proof\)</span>: 
-    If <span class="arithmatex">\(e'\)</span> is also an identity, then <span class="arithmatex">\(e=e*e'=e'\)</span>.
-    2. The inverse <span class="arithmatex">\(a^{-1}\)</span> of <span class="arithmatex">\(a\)</span> is unique.
-    <span class="arithmatex">\(proof\)</span>: If <span class="arithmatex">\((a^{-1})'\)</span> is also an inverse of <span class="arithmatex">\(a\)</span>,  then <span class="arithmatex">\(a^{-1}=a^{-1}*e=a^{-1}*(a*(a^{-1})')=(a^{-1}*a)*(a^{-1})'=(a^{-1})'.\)</span>
-    3. <span class="arithmatex">\((a^{-1})^{-1}=a.\)</span>
-    4. <span class="arithmatex">\((a*b)^{-1}=b^{-1}*a^{-1}\)</span>.
-    By induction, <span class="arithmatex">\((a_1*a_2*...*a_n)^{-1}=a_n^{-1}*a_{n-1}^{-1}*...*a_1^{-1}.\)</span>
-    5. (Cancellation law)
-    <span class="arithmatex">\(a*b=a*c \Rightarrow b=c\)</span>.
-    <span class="arithmatex">\(b*a=c*a \Rightarrow b=c\)</span>.</p>
+<h2 id="group">Group<a class="headerlink" href="#group" title="Permanent link">&para;</a></h2>
+<div class="admonition info definition">
+<p class="admonition-title">Info</p>
+<p>A group is a set <span class="arithmatex">\(G\)</span> with a binary operation <span class="arithmatex">\(*\)</span>:<span class="arithmatex">\((a,b) \mapsto a*b\)</span>, satisfying:
+1. <span class="arithmatex">\((a*b)*c=a*(b*c).\)</span> 
+2. <span class="arithmatex">\(\exist\)</span> an element <span class="arithmatex">\(e \in G\)</span>, called the identity, <span class="arithmatex">\(s.t.e*a=a*e=a,\forall a \in G.\)</span>
+3. For any <span class="arithmatex">\(a\in G\)</span>,<span class="arithmatex">\(\exist\)</span> <span class="arithmatex">\(a^{-1}\)</span>, called an inverse of <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(s.t.a*a^{-1}=a^{-1}*a=e\)</span> </p>
+<p>If <span class="arithmatex">\(a*b=b*a,\forall a,b\in G\)</span>,<span class="arithmatex">\(G\)</span> is called abelian or commutative.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>&#x2460; <span class="arithmatex">\((ℤ,+)\)</span> is an abelian group.The identity is <span class="arithmatex">\(0\)</span>.
+&#x2461; <span class="arithmatex">\((V,+)\)</span> is an abelian group.(<span class="arithmatex">\(V\)</span> is vector space over <span class="arithmatex">\(F\)</span>)
+&#x2462; <span class="arithmatex">\((ℤ/mℤ,+)\)</span> is a group.The identity is <span class="arithmatex">\(\overline{0}\)</span>.
+&#x2463; Let <span class="arithmatex">\((G,*)\)</span> and <span class="arithmatex">\((H,\)</span> &#9702;<span class="arithmatex">\()\)</span> be groups.We define <span class="arithmatex">\((G\times H,\Delta):(g,h)\Delta(g',h')=(g*g',h\)</span> &#9702; <span class="arithmatex">\(h')\)</span>.It's a direct product of <span class="arithmatex">\(G\)</span> and <span class="arithmatex">\(H\)</span>, which is also a group.</p>
+</div>
+<div class="admonition info basic properties">
+<p class="admonition-title">Info</p>
+<p>Let <span class="arithmatex">\(G\)</span> be a group,
+1. The identity <span class="arithmatex">\(e\)</span> is unique.<span class="arithmatex">\(proof\)</span>: 
+If <span class="arithmatex">\(e'\)</span> is also an identity, then <span class="arithmatex">\(e=e*e'=e'\)</span>.
+2. The inverse <span class="arithmatex">\(a^{-1}\)</span> of <span class="arithmatex">\(a\)</span> is unique.
+<span class="arithmatex">\(proof\)</span>: If <span class="arithmatex">\((a^{-1})'\)</span> is also an inverse of <span class="arithmatex">\(a\)</span>,  then <span class="arithmatex">\(a^{-1}=a^{-1}*e=a^{-1}*(a*(a^{-1})')=(a^{-1}*a)*(a^{-1})'=(a^{-1})'.\)</span>
+3. <span class="arithmatex">\((a^{-1})^{-1}=a.\)</span>
+4. <span class="arithmatex">\((a*b)^{-1}=b^{-1}*a^{-1}\)</span>.
+By induction, <span class="arithmatex">\((a_1*a_2*...*a_n)^{-1}=a_n^{-1}*a_{n-1}^{-1}*...*a_1^{-1}.\)</span>
+5. (Cancellation law)
+<span class="arithmatex">\(a*b=a*c \Rightarrow b=c\)</span>.
+<span class="arithmatex">\(b*a=c*a \Rightarrow b=c\)</span>.</p>
+</div>
 
 
 

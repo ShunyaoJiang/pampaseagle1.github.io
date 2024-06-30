@@ -556,8 +556,8 @@
 
   <h1>FPA</h1>
 
-<h2 id="some-points-in-c-programming">Some points in C Programming</h2>
-<h3 id="week1">Week1</h3>
+<h2 id="some-points-in-c-programming">Some points in C Programming<a class="headerlink" href="#some-points-in-c-programming" title="Permanent link">&para;</a></h2>
+<h3 id="week1">Week1<a class="headerlink" href="#week1" title="Permanent link">&para;</a></h3>
 <p>P1.C语言的标识符由字母、数字和其他任意字符组成。(T/F)</p>
 <details>
 <summary>answer & analysis</summary>
@@ -565,22 +565,22 @@ F.应当由字母、数字和下划线组成，其中首字符不能为下划线
 </details>
 <p><br/>
 P2.</p>
-<pre><code>int n=5,x;
+<div class="highlight"><pre><span></span><code>int n=5,x;
 x=n++;
 the value of x will be 5. (T/F)
-</code></pre>
+</code></pre></div>
 <details>
 <summary>answer & analysis</summary>
 T.n变为6实际上是n++的side effect，在此之前已经将n的值赋给x。
 </details>
 <p><br/>
 P3.</p>
-<pre><code>int k=2;
+<div class="highlight"><pre><span></span><code>int k=2;
 while (k=0){
-    printf("%d",k);
+    printf(&quot;%d&quot;,k);
     k--;
 }
-</code></pre>
+</code></pre></div>
 <p>while循环执行()次。</p>
 <details>
 <summary>answer & analysis</summary>
@@ -588,7 +588,7 @@ while (k=0){
 </details>
 <p><br/></p>
 <p><br/></p>
-<h3 id="week3">Week3</h3>
+<h3 id="week3">Week3<a class="headerlink" href="#week3" title="Permanent link">&para;</a></h3>
 <p>P1.The following text is part of error information threw by the compiler when compiling some buggy C program.
 <strong>Id:symbol(s) not found for architecrture x86-64
 clang:error:linker command failed with exit code 1</strong>
@@ -609,11 +609,11 @@ F.这不同于char a[5]。
 </details>
 <p><br/></p>
 <p>P3.以下代码，语法正确的是：</p>
-<pre><code>A.while ( ) ;
+<div class="highlight"><pre><span></span><code>A.while ( ) ;
 B.for ( ) ;
 C.for (;;) ;
 D.do { } while ( );
-</code></pre>
+</code></pre></div>
 <details>
 <summary>answer & analysis</summary>
 C.";"是一个空语句。
@@ -621,7 +621,7 @@ C.";"是一个空语句。
 
 <p><br/>
 <br/></p>
-<h3 id="week4">Week4</h3>
+<h3 id="week4">Week4<a class="headerlink" href="#week4" title="Permanent link">&para;</a></h3>
 <p>P1.sizeof()是C语言的一个函数，可以计算参量所占内存的字节数。如sizeof(int)可计算整型所占的字节数。(T/F)</p>
 <details>
 <summary>answer & analysis</summary>
@@ -635,11 +635,11 @@ F.函数调用获得的返回值为0或1个。
 </details>
 <p><br/></p>
 <p>P3.在C语言程序中，若对函数类型未加显式说明，则函数的隐含类型为（）。</p>
-<pre><code>A.void
+<div class="highlight"><pre><span></span><code>A.void
 B.double
 C.char
 D.int
-</code></pre>
+</code></pre></div>
 <details>
 <summary>answer & analysis</summary>
 D.
@@ -647,51 +647,51 @@ D.
 
 <p><br/>
 <br/></p>
-<h3 id="week5">Week5</h3>
+<h3 id="week5">Week5<a class="headerlink" href="#week5" title="Permanent link">&para;</a></h3>
 <p>P1.以下说法正确的是：</p>
-<pre><code>A.一个C语言（源文件.c文件）必须包含main函数
+<div class="highlight"><pre><span></span><code>A.一个C语言（源文件.c文件）必须包含main函数
 B.一个C语言源文件（.c文件）可以包含两个以上main函数
 C.C语言头文件（.h文件）和源文件（.c文件）都可以进行编译
 D.在一个可以正确执行的C语言程序中，一个C语言函数的声明（原型）可以出现任意多次。
-</code></pre>
+</code></pre></div>
 <details>
 <summary>answer & analysis</summary>
 C.这题可能错选A，事实上多文件编程时，只需要一个.c文件包含main函数即可。
 </details>
 
 <p><br/></p>
-<h3 id="week6">Week6</h3>
+<h3 id="week6">Week6<a class="headerlink" href="#week6" title="Permanent link">&para;</a></h3>
 <p>P1.Among the following C code segments,which one generates the following error when compiling?
 <strong>error:implicit declaration of funciton is invalid in C99</strong></p>
 <p>A.</p>
-<pre><code>int my_pow(int a,int b)
+<div class="highlight"><pre><span></span><code>int my_pow(int a,int b)
 int main()
 {
     int a = my_pow(2,6);
 }
-</code></pre>
+</code></pre></div>
 <p>B.</p>
-<pre><code>int my_pow(int a,int b) {}
+<div class="highlight"><pre><span></span><code>int my_pow(int a,int b) {}
 int main()
 {
     int a = my_pow(2,6);
 }
-</code></pre>
+</code></pre></div>
 <p>C.</p>
-<pre><code>int main()
+<div class="highlight"><pre><span></span><code>int main()
 {
     int a = my_pow(2,6);
 }
 int my_pow(int a,int b) {}
-</code></pre>
+</code></pre></div>
 <p>D.</p>
-<pre><code>int my_pow(int a,int b);
+<div class="highlight"><pre><span></span><code>int my_pow(int a,int b);
 int main()
 {
     int a = my_pow(2,6);
 }
 int my_pow(int a,int b) {}
-</code></pre>
+</code></pre></div>
 <details>
 <summary>answer & analysis</summary>
 C.在C语言中，当调用一个在调用时尚未被声明的函数时，编译器会给出implicit declaration of function的error报错，属于编译阶段错误，只有C项符合在调用时尚未声明；当某个被调用的函数只有声明没有定义时会给出Undefined symbols、symbol(s) not found等error报错，但这种报错本质是链接错误(linker command failed with exit code 1)，是在编译完成后链接阶段的错误，A项会报此错；当某个返回值类型不为void的函数没有返回值时，编译器一般之报warning或者不报错，不会报error。如果调用了该函数并取得返回值，一般取得一个不确定值，B、D项会出现这种情况。
@@ -716,14 +716,14 @@ E项是正常的二维数组初始化方式，末尾的逗号无关紧要，没�
 F项没有确定数组第一维的大小，不能通过编译。
 </details>
 <p><br/></p>
-<h3 id="week10">Week10</h3>
+<h3 id="week10">Week10<a class="headerlink" href="#week10" title="Permanent link">&para;</a></h3>
 <p>Some points:
 1.Array as a parameter is pointer.But it can be used with operator[],which makes it look like an array.So the four prototypes below are equal:</p>
-<pre><code>int sum(int *a,int n);
+<div class="highlight"><pre><span></span><code>int sum(int *a,int n);
 int sum(int *,int n);
 int sum(int a[],int n);
 int sum(int [],int n);
-</code></pre>
+</code></pre></div>
 <p><br/>
 2.Array variable is const pointer,that's why it cannot be assigned.
 <br/>
@@ -822,45 +822,45 @@ D.</em>pc = &amp;s</p>
 C.首先pc是一个指针数组，A显然错误。*pc相当于pc[0],B右边的s[0]是一个字符，不能给pc[0]（字符串）；D中&s是整个字符数组的地址，如果储存起来就是(char *)[10]，也不能赋给pc[0]；C中的s是字符数组，传递时隐式转换成char *，可以赋给pc[0].
 </details>
 <p><br/></p>
-<h3 id="week11">Week11</h3>
+<h3 id="week11">Week11<a class="headerlink" href="#week11" title="Permanent link">&para;</a></h3>
 <p>Some points:
 1.char <em>s = "Hello world!"中，s是一个指针，初始化为指向一个字符串常量，所以s实际上是const char </em>s，但由于历史原因编译器接受不带const的写法。（但是试图对s所指的字符串做写入会导致严重后果。）如果要修改字符串，则应写成数组char s[] = "Hello World!"。
 <br/>
 2.String Functions in the Standard Library
 strlen:</p>
-<pre><code>size_t strlen(const char *s)
-</code></pre>
+<div class="highlight"><pre><span></span><code>size_t strlen(const char *s)
+</code></pre></div>
 <p>return the length of a string('\0' not included)
 <br/>
 strcmp:</p>
-<pre><code>int strcmp(const char *s1,const char *s2);
-</code></pre>
+<div class="highlight"><pre><span></span><code>int strcmp(const char *s1,const char *s2);
+</code></pre></div>
 <p>compare two strings,return:</p>
-<pre><code>0 : s1 == s2
+<div class="highlight"><pre><span></span><code>0 : s1 == s2
 &gt;0 ：s1 &gt; s2
 &lt;0 : s1 &lt; s2
-</code></pre>
+</code></pre></div>
 <p><br/>
 strcpy</p>
-<pre><code>char *strcpy(char *restrict dst,const char *restrict stc);
-</code></pre>
+<div class="highlight"><pre><span></span><code>char *strcpy(char *restrict dst,const char *restrict stc);
+</code></pre></div>
 <p>把src的字符串拷贝到dst，restrict表明src和dst不重叠（C99），返回dst（链起代码）
 <br/>
 strcat</p>
-<pre><code>char *strcat(char *restrict s1,const char *restrict s2);
-</code></pre>
+<div class="highlight"><pre><span></span><code>char *strcat(char *restrict s1,const char *restrict s2);
+</code></pre></div>
 <p>把s2拷贝到s1后面，接成一个长字符串，返回s1。
 <br/>
 strchr/strrchr</p>
-<pre><code>char *strchr(const char *s,int c);
+<div class="highlight"><pre><span></span><code>char *strchr(const char *s,int c);
 char *strrchr(const char *s,int c);
-</code></pre>
+</code></pre></div>
 <p>在字符串中找字符，返回NULL表示没有找到。
 <br/>
 strstr/strcasestr</p>
-<pre><code>char *strstr(const char *s1,const char *s2);
+<div class="highlight"><pre><span></span><code>char *strstr(const char *s1,const char *s2);
 char *strcasestr(const char *s1,const char *s2);
-</code></pre>
+</code></pre></div>
 <p>在字符串中找字符串。
 <br/>
 <br/>
@@ -898,31 +898,31 @@ D. 注意[]的优先级高于*，而str[1]指向"SQL"的首地址，解应用得
 </details>
 <p><br/></p>
 <p><br/></p>
-<h3 id="week14">Week14</h3>
+<h3 id="week14">Week14<a class="headerlink" href="#week14" title="Permanent link">&para;</a></h3>
 <p>1.在全局变量前加上static就使得它称为只能在所在编译单元中被使用的全局变量（静态变量）。类似地，在函数前面加上static就使得它成为只能在所在编译单元中被使用的函数（静态函数）。
 <br/>
 2.关于声明和定义：声明是不产生代码的东西，包括函数原型、变量声明、结构声明、宏声明、枚举声明、类型声明、inline函数等；而定义是产生代码的东西。下面是几个声明的例子：</p>
-<pre><code>函数原型声明：int func(int a,int b);
+<div class="highlight"><pre><span></span><code>函数原型声明：int func(int a,int b);
 变量声明：extern int a;（声明一个整型全局变量）
 枚举声明：enum num｛one = 1,two,three｝;
-</code></pre>
+</code></pre></div>
 <p><br/>
 3.标准头文件结构：</p>
-<pre><code>#ifndef __A_H__
+<div class="highlight"><pre><span></span><code>#ifndef __A_H__
 #define __A_H__
 ...
 #endif
-</code></pre>
+</code></pre></div>
 <p>运用条件编译宏，保证这个头文件在一个编译单元中只会被#include一次。
 <br/>
 4.前向声明：</p>
-<pre><code>struct Node;
+<div class="highlight"><pre><span></span><code>struct Node;
 typedef struct _list
 {
     Node *head;
     Node *tail;
 }
-</code></pre>
+</code></pre></div>
 <p>这里不需要具体知道Node是怎样的，所以可以用struct Node来告诉编译器Node是一个结构.
 <br/>
 <br/></p>
@@ -955,7 +955,7 @@ C. C语言的全局变量初始化是在main()函数开始前完成的。
 </details>
 <p><br/>
 <br/></p>
-<h3 id="week15">Week15</h3>
+<h3 id="week15">Week15<a class="headerlink" href="#week15" title="Permanent link">&para;</a></h3>
 <p>1.格式化的输入输出：
 ·printf</p>
 <blockquote>
@@ -1190,7 +1190,7 @@ C. C语言的全局变量初始化是在main()函数开始前完成的。
 </em><em>·</em><em> fprintf(FILE</em>,..)</p>
 </blockquote>
 <p>打开文件的标准代码：</p>
-<pre><code>FILE *fp = fopen("file","r");
+<div class="highlight"><pre><span></span><code>FILE *fp = fopen(&quot;file&quot;,&quot;r&quot;);
 if (fp)
 {
     fscanf(fp,...);
@@ -1200,8 +1200,8 @@ else
 {
     ...
 }
-</code></pre>
-<h4 id="fopen">fopen</h4>
+</code></pre></div>
+<h4 id="fopen">fopen<a class="headerlink" href="#fopen" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1238,9 +1238,9 @@ else
 </table>
 <p><br/>
 P1.以下代码的输出为____.</p>
-<pre><code>int x = -1;
-printf("%d",(unsigned int)x);
-</code></pre>
+<div class="highlight"><pre><span></span><code>int x = -1;
+printf(&quot;%d&quot;,(unsigned int)x);
+</code></pre></div>
 <details>
 <summary>answer & analysis</summary>
 -1. unsigned int的转换只是以无符号的方式来理解数据，并不会改变x的二进制值。对于printf来说，它要输出的是%d（有符号数），所以输出时仍当作有符号整型来理解。
@@ -1248,49 +1248,49 @@ printf("%d",(unsigned int)x);
 
 <p><br/>
 P2.以下代码的输出为_____.</p>
-<pre><code> char str[100] = "ZhejiangU 1 3 5",s[10];
+<div class="highlight"><pre><span></span><code> char str[100] = &quot;ZhejiangU 1 3 5&quot;,s[10];
  int n;
- sscanf(str,"%s %*d %d %*d",s,&amp;n);
- printf("%s",&amp;s[n]);
-</code></pre>
+ sscanf(str,&quot;%s %*d %d %*d&quot;,s,&amp;n);
+ printf(&quot;%s&quot;,&amp;s[n]);
+</code></pre></div>
 <details>
 <summary>answer & analysis</summary>
 jiangU. %*d表示读取的是一个整型，但是直接忽略，不存到变量中。所以sscanf读取到的n是第二个数字3，然后输出s[3]开始的字符串，即jiangU.
 </details>
 
-<h2 id="resizable-array">Resizable array</h2>
+<h2 id="resizable-array">Resizable array<a class="headerlink" href="#resizable-array" title="Permanent link">&para;</a></h2>
 <p>Definition:</p>
-<pre><code>typedef struct
+<div class="highlight"><pre><span></span><code>typedef struct
 {
     int *array;
     int size;
 }Array;
-</code></pre>
+</code></pre></div>
 <p>array_create:</p>
-<pre><code>Array array_create(int init_size)
+<div class="highlight"><pre><span></span><code>Array array_create(int init_size)
 {
     Array a;
     a.array = (int *)malloc(sizeof(int) * init_size);
     a.size = init_size;
     return a;
 }
-</code></pre>
+</code></pre></div>
 <p>array_free:</p>
-<pre><code>void array_free(Array *a)
+<div class="highlight"><pre><span></span><code>void array_free(Array *a)
 {
     free(a-&gt;array);
     a-&gt;array = NULL;
     a-&gt;size = 0;
 }
-</code></pre>
+</code></pre></div>
 <p>array_size:</p>
-<pre><code>int array_size(const Array *a)
+<div class="highlight"><pre><span></span><code>int array_size(const Array *a)
 {
     return a-&gt;size;
 }
-</code></pre>
+</code></pre></div>
 <p>array_at(the first index is 0):</p>
-<pre><code>int *array_at(Array *a,int index)
+<div class="highlight"><pre><span></span><code>int *array_at(Array *a,int index)
 {
     if (index &gt;= a-&gt;size)
     {
@@ -1298,9 +1298,9 @@ jiangU. %*d表示读取的是一个整型，但是直接忽略，不存到变量
     }
     return &amp;(a-&gt;array[index]);
 }
-</code></pre>
+</code></pre></div>
 <p>array_inflate</p>
-<pre><code>void array_inflate(Array *a,int more_size)
+<div class="highlight"><pre><span></span><code>void array_inflate(Array *a,int more_size)
 {
     int *p = (int *)malloc(sizeof(int) * (a-&gt;size + more_size));
     for (int i=0;i&lt;a-&gt;size;i++) p[i] = a-&gt;array[i];
@@ -1309,19 +1309,19 @@ jiangU. %*d表示读取的是一个整型，但是直接忽略，不存到变量
     a-&gt;array = p;
     a-&gt;size = a-&gt;size + more_size;
 }
-</code></pre>
+</code></pre></div>
 <p><br/></p>
-<h2 id="linked-array">Linked Array</h2>
+<h2 id="linked-array">Linked Array<a class="headerlink" href="#linked-array" title="Permanent link">&para;</a></h2>
 <p>Definition:</p>
-<pre><code>typedef struct _array
+<div class="highlight"><pre><span></span><code>typedef struct _array
 {
     int *array;
     int size;
     struct _array *next;
 }Array;
-</code></pre>
+</code></pre></div>
 <p>array_create:</p>
-<pre><code>Array array_create()
+<div class="highlight"><pre><span></span><code>Array array_create()
 {
     Array a;
     a.array = (int *)malloc(sizeof(int) * BLOCK_SIZE);
@@ -1329,9 +1329,9 @@ jiangU. %*d表示读取的是一个整型，但是直接忽略，不存到变量
     a.next = 0;
     return a;
 }
-</code></pre>
+</code></pre></div>
 <p>array_free:</p>
-<pre><code>void array_free(Array *a)
+<div class="highlight"><pre><span></span><code>void array_free(Array *a)
 {
     free(a-&gt;array);
     a-&gt;size = 0;
@@ -1341,9 +1341,9 @@ jiangU. %*d表示读取的是一个整型，但是直接忽略，不存到变量
         free(a-&gt;next);
     }
 }
-</code></pre>
+</code></pre></div>
 <p>array_size:</p>
-<pre><code>int array_size(Array *a)
+<div class="highlight"><pre><span></span><code>int array_size(Array *a)
 {
     if (a-&gt;next == NULL)
     {
@@ -1354,9 +1354,9 @@ jiangU. %*d表示读取的是一个整型，但是直接忽略，不存到变量
         return a-&gt;size + array_size(a-&gt;next);
     }
 }
-</code></pre>
+</code></pre></div>
 <p>array_at:</p>
-<pre><code>int *array_at(Array *a,int index)
+<div class="highlight"><pre><span></span><code>int *array_at(Array *a,int index)
 {
     if (index &lt; a-&gt;size)
     {
@@ -1367,9 +1367,9 @@ jiangU. %*d表示读取的是一个整型，但是直接忽略，不存到变量
         return array_at(a-&gt;next,index - a-&gt;size);
     }
 }
-</code></pre>
+</code></pre></div>
 <p>array_inflate:</p>
-<pre><code>void array_inflate(Array *a)
+<div class="highlight"><pre><span></span><code>void array_inflate(Array *a)
 {
     Array new_array;
     new_array-&gt;array = (int *)malloc(sizeof(int) * BLOCK_SIZE);
@@ -1378,11 +1378,11 @@ jiangU. %*d表示读取的是一个整型，但是直接忽略，不存到变量
     for (Array pre = a;pre-&gt;next;pre = pre-&gt;next) ;
     pre-&gt;next = &amp;new_array;
 }
-</code></pre>
+</code></pre></div>
 <p><br/></p>
-<h2 id="linked-list">Linked List</h2>
+<h2 id="linked-list">Linked List<a class="headerlink" href="#linked-list" title="Permanent link">&para;</a></h2>
 <p>defintion:</p>
-<pre><code>typedef struct _node
+<div class="highlight"><pre><span></span><code>typedef struct _node
 {
     int value;
     struct _node *next;
@@ -1393,18 +1393,18 @@ typedef struct
     Node *head;
     Node *tail;
 }List;
-</code></pre>
+</code></pre></div>
 <p>list_create:</p>
-<pre><code>List *list_create()
+<div class="highlight"><pre><span></span><code>List *list_create()
 {
     List *list = malloc(sizeof(List));
     list-&gt;head = NULL;
     list-&gt;tail = NULL;
     return list;
 }
-</code></pre>
+</code></pre></div>
 <p>insert_head:</p>
-<pre><code>void insert_head(List *list,int value)
+<div class="highlight"><pre><span></span><code>void insert_head(List *list,int value)
 {
     Node *node = malloc(sizeof(Node));
     node-&gt;value = val;
@@ -1421,9 +1421,9 @@ typedef struct
         list-&gt;head = list-&gt;tail = node;
     }
 }
-</code></pre>
+</code></pre></div>
 <p>append_tail:</p>
-<pre><code>void append_tail(List *list,int val)
+<div class="highlight"><pre><span></span><code>void append_tail(List *list,int val)
 {
     Node *node = malloc(sizeof(Node));
     node-&gt;value = val;
@@ -1440,9 +1440,9 @@ typedef struct
         list-&gt;head = list-&gt;tail = node;
     }
 }
-</code></pre>
+</code></pre></div>
 <p>insert_middle:</p>
-<pre><code>void insert_middle(List *list,int index,int val)
+<div class="highlight"><pre><span></span><code>void insert_middle(List *list,int index,int val)
 {
     int cnt = 1;
     Node *p = list-&gt;head;
@@ -1454,9 +1454,9 @@ typedef struct
     p-&gt;next-&gt;prev = node;
     p-&gt;next = node;
 }
-</code></pre>
+</code></pre></div>
 <p>remove:</p>
-<pre><code>void remove_node(List *list,int val)
+<div class="highlight"><pre><span></span><code>void remove_node(List *list,int val)
 {
     Node *p = list-&gt;head;
     for (;p;)
@@ -1493,16 +1493,16 @@ typedef struct
         else p = p-&gt;next;
     }
 }
-</code></pre>
+</code></pre></div>
 <p>traversal:</p>
-<pre><code>void traversal(List *list)
+<div class="highlight"><pre><span></span><code>void traversal(List *list)
 {
     for (Node *p = list-&gt;head;p;p = p-&gt;next)
         ...
 }
-</code></pre>
+</code></pre></div>
 <p>search:</p>
-<pre><code>int search(List *list,int val)
+<div class="highlight"><pre><span></span><code>int search(List *list,int val)
 {
     int index = 1;
     for (Node *p = list-&gt;head;p;p = p-&gt;next,index++)
@@ -1512,9 +1512,9 @@ typedef struct
         }
     return -1;
 }
-</code></pre>
+</code></pre></div>
 <p>free:</p>
-<pre><code>void list_free(List *list)
+<div class="highlight"><pre><span></span><code>void list_free(List *list)
 {
     for (Node *p = list-&gt;head;p;)
     {
@@ -1525,15 +1525,15 @@ typedef struct
     list-&gt;head = list-&gt;tail = NULL;
     free(list);
 }
-</code></pre>
+</code></pre></div>
 <p><br/>
 <br/></p>
-<h3 id="_1">杂项</h3>
+<h3 id="_1">杂项<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>1.关于字符串长度：字符串中出现\ddd时可能为八进制转义字符，取决于后续是否为合法的八进制，以\开始，最少1位，最多3位。此外应注意strlen和sizeof的区别。
 examples:</p>
-<pre><code>char str[] = "hello\61234";
-printf("%s\n",str);
-printf("%d %d\n",strlen(str),sizeof(str));
+<div class="highlight"><pre><span></span><code>char str[] = &quot;hello\61234&quot;;
+printf(&quot;%s\n&quot;,str);
+printf(&quot;%d %d\n&quot;,strlen(str),sizeof(str));
 
 output:
 hello1234
@@ -1541,11 +1541,11 @@ hello1234
 
 
 
-char str[] = "123\029\08";
-printf("%d %d\n,strlen(str),sizeof(str));
+char str[] = &quot;123\029\08&quot;;
+printf(&quot;%d %d\n,strlen(str),sizeof(str));
 
 output:5 8
-</code></pre>
+</code></pre></div>
 <p><br/></p>
 <p>2.关于sizeof问题：</p>
 <blockquote>
@@ -1564,31 +1564,31 @@ sizeof unary-expression
 sizeof (type-name)</p>
 </blockquote>
 <p>An example:</p>
-<pre><code>char ch = 'a';
-printf("%lu\n",sizeof(ch));
-printf("%lu\n",sizeof(ch + 1));
-printf("%lu\n",sizeof('a'));
+<div class="highlight"><pre><span></span><code>char ch = &#39;a&#39;;
+printf(&quot;%lu\n&quot;,sizeof(ch));
+printf(&quot;%lu\n&quot;,sizeof(ch + 1));
+printf(&quot;%lu\n&quot;,sizeof(&#39;a&#39;));
 
 output:
 1
 4
-4 ('a'是字符常量，被看成int类型)
-</code></pre>
+4 (&#39;a&#39;是字符常量，被看成int类型)
+</code></pre></div>
 <p><br/></p>
 <p>3.关于运算符",":逗号运算符会顺序执行一系列运算。整个逗号表达式的值是以逗号分隔的列表中最后一个表达式的值。
 <br/></p>
 <p>4.相同类型的指针相减结果为两指针之间差了多少单位距离，而不是指针的值相减。下面是一个例子：</p>
-<pre><code>int a[] = {1,2,3,4,5};
+<div class="highlight"><pre><span></span><code>int a[] = {1,2,3,4,5};
 int *p = a,*q = &amp;a[2];
-printf("%lu\n",q - p);
-printf("%d\n",(int)&amp;a[2] - (int)a);
+printf(&quot;%lu\n&quot;,q - p);
+printf(&quot;%d\n&quot;,(int)&amp;a[2] - (int)a);
 
 
 output:
 2
 8
-</code></pre>
-<h3 id="about-operator-precedence">About operator precedence</h3>
+</code></pre></div>
+<h3 id="about-operator-precedence">About operator precedence<a class="headerlink" href="#about-operator-precedence" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1687,7 +1687,7 @@ output:
 </table>
 <p>单目&gt;双目
 <br/></p>
-<h4 id="about-escape-char">About escape char</h4>
+<h4 id="about-escape-char">About escape char<a class="headerlink" href="#about-escape-char" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1723,7 +1723,7 @@ output:
 </tbody>
 </table>
 <p><br/></p>
-<h3 id="some-common-c-keywords">Some Common C Keywords</h3>
+<h3 id="some-common-c-keywords">Some Common C Keywords<a class="headerlink" href="#some-common-c-keywords" title="Permanent link">&para;</a></h3>
 <p>auto 
 bool(C23)
 break
@@ -1764,7 +1764,7 @@ while</p>
 <br/>
 <br/>
 <br/></p>
-<h4 id="translation">translation:</h4>
+<h4 id="translation">translation:<a class="headerlink" href="#translation" title="Permanent link">&para;</a></h4>
 <p>adjacent相邻的
 argument参数（实参？）
 assignment operator（赋值运算符）
@@ -1787,7 +1787,7 @@ sub expression子表达式
 unary operator单目运算符</p>
 <p><br/>
 <br/></p>
-<h4 id="several-tiny-points"><em>several tiny points:</em></h4>
+<h4 id="several-tiny-points"><em>several tiny points:</em><a class="headerlink" href="#several-tiny-points" title="Permanent link">&para;</a></h4>
 
 
 
