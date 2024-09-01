@@ -1,19 +1,52 @@
-site_name: Qyadratic Reciprocity
+site_name: Quadratic Reciprocity
 nav:
 - Homepage: index.md
 - Note:
-  - Computer Science:
-    - FPA: note/Computer_Science/FPA.md
-
+  # - Computer Science:
+    #  - FPA: note/Computer_Science/FPA.md
+  - Mathematics:
+    - Linear Algebra: note/Mathematics/Linear_Algebra.md
+    - Abstract Algebra: note/Mathematics/Abstract_Algebra.md
+- Friends: others/friends.md
 theme:
   name: material
 
 markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - meta
+  - def_list
+  - attr_list
+  - footnotes
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.arithmatex:
       generic: true
+  - neoteroi.cards
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - css/cards.css
 
 extra_javascript:
   - js/katex.js
