@@ -351,6 +351,59 @@
     Group
   </a>
   
+    <nav class="md-nav" aria-label="Group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lec1" class="md-nav__link">
+    Lec1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lec2" class="md-nav__link">
+    Lec2
+  </a>
+  
+    <nav class="md-nav" aria-label="Lec2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-isomorphisms" class="md-nav__link">
+    Group isomorphisms(群同构)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lec3" class="md-nav__link">
+    Lec3
+  </a>
+  
+    <nav class="md-nav" aria-label="Lec3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-cases" class="md-nav__link">
+    Two cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -425,6 +478,59 @@
     Group
   </a>
   
+    <nav class="md-nav" aria-label="Group">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lec1" class="md-nav__link">
+    Lec1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lec2" class="md-nav__link">
+    Lec2
+  </a>
+  
+    <nav class="md-nav" aria-label="Lec2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-isomorphisms" class="md-nav__link">
+    Group isomorphisms(群同构)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lec3" class="md-nav__link">
+    Lec3
+  </a>
+  
+    <nav class="md-nav" aria-label="Lec3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-cases" class="md-nav__link">
+    Two cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -445,6 +551,7 @@
   <h1>Abstract Algebra</h1>
 
 <h2 id="group">Group<a class="headerlink" href="#group" title="Permanent link">&para;</a></h2>
+<h3 id="lec1">Lec1<a class="headerlink" href="#lec1" title="Permanent link">&para;</a></h3>
 <div class="admonition definition">
 <p class="admonition-title">Definition</p>
 <p>A group is a set <span class="arithmatex">\(G\)</span> with a binary operation <span class="arithmatex">\(*\)</span>:<span class="arithmatex">\((a,b) \mapsto a*b\)</span>, satisfying:</p>
@@ -492,6 +599,82 @@ By induction, <span class="arithmatex">\((a_1*a_2*...*a_n)^{-1}=a_n^{-1}*a_{n-1}
 <span class="arithmatex">\(b*a=c*a \Rightarrow b=c\)</span>.</p>
 </li>
 </ol>
+</div>
+<h3 id="lec2">Lec2<a class="headerlink" href="#lec2" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>(1) <span class="arithmatex">\({s_1,...,s_n} \in G\)</span> is a set of generators of <span class="arithmatex">\(G\)</span> if every element of <span class="arithmatex">\(G\)</span> can be written as a product of <span class="arithmatex">\(s_1,...,s_n\)</span> and <span class="arithmatex">\(s_1^{-1},...s_n^{-1}.\)</span></p>
+<p>(2) A relation is an equality consisting of the generators and their inverses.</p>
+<p>Write <span class="arithmatex">\(G=\lang s_1,...,s_n|R_1,...,R_m\rang\)</span> if every relation can be deduced from <span class="arithmatex">\(R_1,...R_m\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>$\mathbb{Z}_n=\mathbb{Z}/n\mathbb{Z} \cong \lang x|x^n=e \rang $.</p>
+<p><span class="arithmatex">\(\mathbb{Z}_6 \cong \lang r,s|r^3=1,s^2=1,rs=sr\rang\)</span>.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Let <span class="arithmatex">\(\Omega\)</span> be a set.The set <span class="arithmatex">\(S_\Omega=\)</span> { bijections  <span class="arithmatex">\(\sigma:\Omega \longrightarrow \Omega\)</span> } has a <span class="arithmatex">\(gp\)</span> struct:
+<span class="arithmatex">\(gp\)</span> struct : <span class="arithmatex">\(\sigma\tau=\sigma\)</span>&#9702;<span class="arithmatex">\(\tau\)</span>
+identity:<span class="arithmatex">\(e=id_\Omega\)</span>
+inverse:inverse of map</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><span class="arithmatex">\(S_n=S_{1,2,...n},|S_n|=n!.\)</span>
+Elements of <span class="arithmatex">\(S_n\)</span>:
+the first expression:
+<span class="arithmatex">\(\sigma= 
+\begin{pmatrix} 
+1 &amp; 2 &amp; ... &amp; n \\
+\sigma_1 &amp; \sigma_2 &amp; ... &amp; \sigma_n
+\end{pmatrix}\)</span> , where <span class="arithmatex">\(\sigma_i=\sigma(i)\)</span>.
+the second expression:
+consider <span class="arithmatex">\(n=7\)</span>, <span class="arithmatex">\(\sigma=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 \\
+7 &amp; 5 &amp; 1 &amp; 3 &amp; 2 &amp; 6 &amp; 4 \\
+\end{pmatrix}\)</span>,
+we can also write as <span class="arithmatex">\(\sigma=(1 7 4 3)(2 5)(6)\)</span>, where <span class="arithmatex">\((a_1,...a_r)\)</span> with <span class="arithmatex">\(a_1,...,a_r\)</span> distinct is called a cycle,that maps <span class="arithmatex">\(a_1 \mapsto a_2 \mapsto ... \mapsto a_r \mapsto a_1\)</span>.</p>
+</div>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<p>&#x2460; Disjoint cycles commute with each other.
+<span class="arithmatex">\((a_1\)</span> <span class="arithmatex">\(a_2)\)</span> is called a transposition.
+&#x2461; <span class="arithmatex">\((a_1,a_2,...,a_r)=(a_2,a_3,...,a_1)\)</span>.
+<span class="arithmatex">\((a_1,...,a_r)^{-1}=(a_r,...,r_1).\)</span>
+&#x2462; <span class="arithmatex">\(S_1\)</span> is trival.
+<span class="arithmatex">\(S_2=\)</span> {<span class="arithmatex">\(1,(1\)</span> <span class="arithmatex">\(2)\)</span>} <span class="arithmatex">\(\cong \mathbb{Z}_2\)</span>
+<span class="arithmatex">\(S_n\)</span> is not abelian for all <span class="arithmatex">\(n \ge3.\)</span></p>
+</div>
+<div class="admonition info important conclusions">
+<p class="admonition-title">Info</p>
+<p>&#x2460; <span class="arithmatex">\(S_n\)</span> is generated by <span class="arithmatex">\((i\)</span> <span class="arithmatex">\(j),1 \le i&lt;j \le n\)</span>.
+&#x2461; <span class="arithmatex">\(S_n\)</span> is generated by <span class="arithmatex">\((i,i+1)\)</span>, <span class="arithmatex">\(i=1,...n-1\)</span>.
+&#x2462; <span class="arithmatex">\(S_n\)</span> is generated by <span class="arithmatex">\((1\)</span> <span class="arithmatex">\(2),(1\)</span> <span class="arithmatex">\(2\)</span> ... <span class="arithmatex">\(n)\)</span>.</p>
+</div>
+<h4 id="group-isomorphisms">Group isomorphisms(群同构)<a class="headerlink" href="#group-isomorphisms" title="Permanent link">&para;</a></h4>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Two groups <span class="arithmatex">\((G,*)\)</span> and <span class="arithmatex">\((H,\)</span> &#9702;<span class="arithmatex">\()\)</span> are isomorphic denoted by <span class="arithmatex">\(G \cong H\)</span>,if there is a bijection <span class="arithmatex">\(\psi:G \longrightarrow H,\)</span> s.t. <span class="arithmatex">\(\psi(g*g')=\psi(g)\)</span> &#9702; <span class="arithmatex">\(\psi(g'),\forall g,g' \in G.\)</span></p>
+</div>
+<h3 id="lec3">Lec3<a class="headerlink" href="#lec3" title="Permanent link">&para;</a></h3>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A group <span class="arithmatex">\(G\)</span> is cyclic if <span class="arithmatex">\(\exist x \in G,s.t.G=\{x^k|k \in \mathbb{Z}\}\)</span>.</p>
+</div>
+<h4 id="two-cases">Two cases<a class="headerlink" href="#two-cases" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(|G|=n&lt;\infty,G=\{e,x,x^2,...,x^{n-1} \},G \cong \mathbb{Z}_n\)</span>.</p>
+<p><span class="arithmatex">\(|G|=\infty,G \cong \mathbb{Z}.\)</span></p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>群<span class="arithmatex">\(G\)</span>的一个子集<span class="arithmatex">\(H\)</span>称为<span class="arithmatex">\(G\)</span>的一个子集，如果<span class="arithmatex">\(H\)</span>关于<span class="arithmatex">\(G\)</span>中的运算也构成一个群.
+等价叙述：<span class="arithmatex">\(H \neq \emptyset,\forall a,b\in H,ab^{-1}\in H.\)</span></p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>设<span class="arithmatex">\(A\)</span>是<span class="arithmatex">\(G\)</span>的一个子集，则<span class="arithmatex">\(A\)</span>生成的子群<span class="arithmatex">\(\lang A\rang:=\{a_1^{e_1}...a_r^{e_r}|r\geqslant0,a_i\in A,e_i=\pm 1 \}.\)</span></p>
+<p>特别地，如果<span class="arithmatex">\(G\)</span>是阿贝尔群，<span class="arithmatex">\(A=\{a_1,...,a_n\}\)</span>，则<span class="arithmatex">\(\lang A \rang=\{a_1^{k_1}...a_n^{k_n}|k_i \in \mathbb{Z}\}.\)</span></p>
 </div>
 
 
