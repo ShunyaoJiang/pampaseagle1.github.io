@@ -7,6 +7,8 @@ nav:
   - Mathematics:
     - Linear Algebra: note/Mathematics/Linear_Algebra.md
     - Abstract Algebra: note/Mathematics/Abstract_Algebra.md
+  - Others:
+    - Git cheat sheet: note/others/git_usage.md
 - Friends: others/friends.md
 theme:
   name: material
