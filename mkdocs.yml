@@ -12,7 +12,54 @@ nav:
 - Friends: others/friends.md
 theme:
   name: material
+  favicon: image/pp.jpg
+  logo: image/pp.jpg
+  icon:
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    admonition:
+      info: fontawesome/solid/anchor
+      note: fontawesome/solid/pen-nib
+      note: fontawesome/solid/pen-nib
+      abstract: fontawesome/solid/list
+      tip: fontawesome/solid/lightbulb
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: material/alien
+      danger: fontawesome/solid/virus
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/link
 
+palette:
+  - media: "(prefers-colors-scheme: light)"
+    scheme: theme
+    primary: blue
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle:
+      icon: material/weather-night
+      name: Switch to light mode
+
+features:
+  - navigation.footer
+  - navigation.path
+  - navigation.indexes
+  - navigation.top
+
+plugins:
+  - blog:
+    archive: false
+    psot_readtime_words_per_minute: 350
+    post_date_format: full
+    blog_toc: true
+    post_excerpt_separator: <!-- more -->
+  - statistics:
+    words_per_minute: 350
 markdown_extensions:
   - toc:
       permalink: true
@@ -47,6 +94,8 @@ markdown_extensions:
   - neoteroi.cards
 
 extra_css:
+  - https://fonts.font.im/css2?family=Noto+Serif+SC
+  - https://fonts.font.im/css?family=Gloria+Hallelujah
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - css/cards.css
 
