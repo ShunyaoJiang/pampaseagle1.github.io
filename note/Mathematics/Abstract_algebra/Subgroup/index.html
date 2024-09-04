@@ -10,26 +10,28 @@
         <meta name="author" content="Jiang_SY">
       
       
-        <link rel="canonical" href="https://pampaseagle1.github.io/">
+        <link rel="canonical" href="https://pampaseagle1.github.io/note/Mathematics/Abstract_algebra/Subgroup/">
       
       
+        <link rel="prev" href="../Basic_concepts/">
       
-        <link rel="next" href="note/Mathematics/Linear_Algebra/">
+      
+        <link rel="next" href="../../../others/git_usage/">
       
       
-      <link rel="icon" href="image/pp.jpg">
+      <link rel="icon" href="../../../../image/pp.jpg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
     
     
       
-        <title>Quadratic Reciprocity</title>
+        <title>Subgroup - Quadratic Reciprocity</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
   
@@ -95,9 +97,9 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-      <link rel="stylesheet" href="css/cards.css">
+      <link rel="stylesheet" href="../../../../css/cards.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -126,7 +128,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quadratic-reciprocity" class="md-skip">
+        <a href="#subgroup-lagrange-theorem" class="md-skip">
           Skip to content
         </a>
       
@@ -142,9 +144,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Quadratic Reciprocity" class="md-header__button md-logo" aria-label="Quadratic Reciprocity" data-md-component="logo">
+    <a href="../../../.." title="Quadratic Reciprocity" class="md-header__button md-logo" aria-label="Quadratic Reciprocity" data-md-component="logo">
       
-  <img src="image/pp.jpg" alt="logo">
+  <img src="../../../../image/pp.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -161,7 +163,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Homepage
+              Subgroup
             
           </span>
         </div>
@@ -259,9 +261,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Quadratic Reciprocity" class="md-nav__button md-logo" aria-label="Quadratic Reciprocity" data-md-component="logo">
+    <a href="../../../.." title="Quadratic Reciprocity" class="md-nav__button md-logo" aria-label="Quadratic Reciprocity" data-md-component="logo">
       
-  <img src="image/pp.jpg" alt="logo">
+  <img src="../../../../image/pp.jpg" alt="logo">
 
     </a>
     Quadratic Reciprocity
@@ -273,29 +275,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Homepage
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -304,33 +286,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#welcome-to-my-page" class="md-nav__link">
-    Welcome to My Page
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -339,6 +294,8 @@
       
   
   
+    
+  
   
     
     
@@ -349,13 +306,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -368,7 +325,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Note
@@ -379,6 +336,8 @@
                 
   
   
+    
+  
   
     
     
@@ -389,13 +348,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
@@ -408,7 +367,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Mathematics
@@ -421,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="note/Mathematics/Linear_Algebra/" class="md-nav__link">
+      <a href="../../Linear_Algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,6 +398,8 @@
                 
   
   
+    
+  
   
     
     
@@ -447,13 +408,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" checked>
         
           <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
             
@@ -466,7 +427,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_2">
             <span class="md-nav__icon md-icon"></span>
             Abstract Algebra
@@ -477,6 +438,8 @@
                 
   
   
+    
+  
   
     
     
@@ -487,13 +450,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_1" checked>
         
           <label class="md-nav__link" for="__nav_2_1_2_1" id="__nav_2_1_2_1_label" tabindex="0">
             
@@ -506,7 +469,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_2_1">
             <span class="md-nav__icon md-icon"></span>
             Group
@@ -519,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="note/Mathematics/Abstract_algebra/Basic_concepts/" class="md-nav__link">
+      <a href="../Basic_concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -537,9 +500,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="note/Mathematics/Abstract_algebra/Subgroup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Subgroup
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -548,6 +529,31 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#subgroup-lagrange-theorem" class="md-nav__link">
+    Subgroup &amp; Lagrange Theorem
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -621,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="note/others/git_usage/" class="md-nav__link">
+      <a href="../../../others/git_usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/friends/" class="md-nav__link">
+      <a href="../../../../others/friends/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -686,8 +692,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -696,8 +700,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-my-page" class="md-nav__link">
-    Welcome to My Page
+  <a href="#subgroup-lagrange-theorem" class="md-nav__link">
+    Subgroup &amp; Lagrange Theorem
   </a>
   
 </li>
@@ -717,9 +721,57 @@
                   
 
 
-<h1 id="quadratic-reciprocity">Quadratic Reciprocity<a class="headerlink" href="#quadratic-reciprocity" title="Permanent link">&para;</a></h1>
-<h2 id="welcome-to-my-page">Welcome to My Page<a class="headerlink" href="#welcome-to-my-page" title="Permanent link">&para;</a></h2>
-<p>这里是一些课程的笔记，也许未来还会更新更多有(qi)趣(guai)的东西（？</p>
+  <h1>Subgroup</h1>
+
+<h2 id="subgroup-lagrange-theorem">Subgroup &amp; Lagrange Theorem<a class="headerlink" href="#subgroup-lagrange-theorem" title="Permanent link">&para;</a></h2>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>群<span class="arithmatex">\(G\)</span>的子集<span class="arithmatex">\(H\)</span>称为<span class="arithmatex">\(G\)</span>的一个子群，如果<span class="arithmatex">\(H\)</span>关于<span class="arithmatex">\(G\)</span>中的运算也构成一个群.
+等价叙述：<span class="arithmatex">\(H \neq \emptyset,\forall a,b\in H,ab^{-1}\in H.\)</span></p>
+</div>
+<p>在一般的几何空间中，设<span class="arithmatex">\(\pi_0\)</span>是过原点<span class="arithmatex">\(O\)</span>的平面，空间中两点<span class="arithmatex">\(A,B\)</span>属于同一个与<span class="arithmatex">\(\pi_0\)</span>平行或重合的平面当且仅当<span class="arithmatex">\(\overrightarrow{OA}-\overrightarrow{OB}\in \pi_0\)</span>.上述建立了几何空间中的一个二元等价关系，每一个等价类都是与<span class="arithmatex">\(\pi_0\)</span>平行或重合的一个平面。
+上述几何空间的例子启发我们考虑群上的二元关系，设<span class="arithmatex">\(H\)</span>是<span class="arithmatex">\(G\)</span>的一个子群，我们规定<span class="arithmatex">\(G\)</span>上的一个二元关系：<span class="arithmatex">\(<span class="arithmatex">\(a \sim b: \iff ab^{-1}\in H\)</span>\)</span>
+容易验证，这样定义的<span class="arithmatex">\(\sim\)</span>是一个等价关系.任给<span class="arithmatex">\(a\in G\)</span>，其等价类为<span class="arithmatex">\(\overline{a}=\set{x\in G \mid xa^{-1}\in H}=\set{x\in G \mid x=ha,h\in H}=\set{ha \mid h\in H}\)</span>，这就引出下面的定义：</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>对于群<span class="arithmatex">\(G\)</span>和其子群<span class="arithmatex">\(H\)</span>，<span class="arithmatex">\(a \in G\)</span>，定义<span class="arithmatex">\(Ha:=\set{ha \mid h\in H}\)</span>是<span class="arithmatex">\(H\)</span>的一个右陪集，<span class="arithmatex">\(a\)</span>称为陪集代表.由上面的推导可知：<span class="arithmatex">\(H\)</span>的所有右陪集构成<span class="arithmatex">\(G\)</span>的一个划分，此集合称为<span class="arithmatex">\(G\)</span>关于子群<span class="arithmatex">\(H\)</span>的右商集，记作<span class="arithmatex">\((G/H)_r\)</span>.类似地定义<span class="arithmatex">\(H\)</span>的左陪集和群<span class="arithmatex">\(G\)</span>关于子群<span class="arithmatex">\(H\)</span>的左商集。</p>
+</div>
+<p>考虑$$\sigma:(G/H)_l \rightarrow (G/H)_r $$</p>
+<div class="arithmatex">\[aH \mapsto Ha^{-1}\]</div>
+<p>容易验证<span class="arithmatex">\(\sigma\)</span>是双射，于是<span class="arithmatex">\((G/H)_l\)</span>与<span class="arithmatex">\((G/H)_r\)</span>的基数相同，由此引出指数的定义：</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>设<span class="arithmatex">\(H\)</span>是<span class="arithmatex">\(G\)</span>的一个子群，<span class="arithmatex">\([G:H]:=(G/H)_l\)</span>或<span class="arithmatex">\((G/H)_r\)</span>的基数，称为<span class="arithmatex">\(H\)</span>在<span class="arithmatex">\(G\)</span>中的指数。</p>
+</div>
+<p>若群<span class="arithmatex">\(G\)</span>的子群<span class="arithmatex">\(H\)</span>在<span class="arithmatex">\(G\)</span>中的指数<span class="arithmatex">\([G:H]=r\)</span>，则<span class="arithmatex">\(G=H \bigcup a_1H\bigcup...\bigcup a_{r-1}H\)</span>，该式称为群<span class="arithmatex">\(G\)</span>关于子群<span class="arithmatex">\(H\)</span>的左陪集分解式.利用分解式，我们可以推导出以下重要结论.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>设<span class="arithmatex">\(G\)</span>是有限群，<span class="arithmatex">\(H\)</span>是<span class="arithmatex">\(G\)</span>的任一子群，则<span class="arithmatex">\(|G| = [G:H]|H|\)</span>.</p>
+</div>
+<details class="general">
+<summary>Proof</summary>
+<p>考虑映射$$
+\tau:H\rightarrow aH $$</p>
+<div class="arithmatex">\[h \mapsto ah\]</div>
+<p>容易看出<span class="arithmatex">\(\tau\)</span>是双射，从而<span class="arithmatex">\(|H|=|aH|,\forall a\in G\)</span>.</p>
+<p>设<span class="arithmatex">\([G:H]=r\)</span>，则从<span class="arithmatex">\(G\)</span>关于子群<span class="arithmatex">\(H\)</span>的左陪集分解式可得:</p>
+<div class="arithmatex">\[|G|=|H|+\sum_1^{r-1}|a_iH|=r|H|=[G:H]|H|.\]</div>
+</details>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p><strong>推论1</strong> 设<span class="arithmatex">\(G\)</span>是有限群，则<span class="arithmatex">\(G\)</span>的任一元素<span class="arithmatex">\(a\)</span>的阶是<span class="arithmatex">\(G\)</span>的阶的因数，从而<span class="arithmatex">\(a^{|G|}=e.\)</span>
+<strong>推论2</strong> 素数阶群一定是循环群.</p>
+</div>
+<p>利用<span class="arithmatex">\(Lagrange\)</span>定理，可以给出<span class="arithmatex">\(Euler\)</span>定理的一个简短证明.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p><strong>Euler's Theorem</strong> <span class="arithmatex">\(m&gt;1,m\in \mathbb{Z},(a,m)=1\)</span>，则<span class="arithmatex">\(a^{\varphi(m)}\equiv1 (mod m)\)</span></p>
+</div>
+<details class="general">
+<summary>Proof</summary>
+<p>与<span class="arithmatex">\(m\)</span>互素的模<span class="arithmatex">\(m\)</span>的剩余类关于乘法<span class="arithmatex">\(\overline{a} \cdot \overline{b}:=\overline{ab}\)</span>构成群<span class="arithmatex">\(\mathbb{Z}_m^*\)</span>.</p>
+<p>由于<span class="arithmatex">\(\overline{a} \in \mathbb{Z}_m^*,|\mathbb{Z}_m^*|=\varphi(m)\)</span>，故<span class="arithmatex">\({\overline{a}}^{|\mathbb{Z}_m^*|}=\overline{1}\)</span>，从而<span class="arithmatex">\(a^{\varphi(m)}\equiv1 (mod m)\)</span>.</p>
+</details>
 
 
 
@@ -746,15 +798,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../Basic_concepts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Basic Concepts" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Basic Concepts
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="note/Mathematics/Linear_Algebra/" class="md-footer__link md-footer__link--next" aria-label="Next: Linear Algebra" rel="next">
+          <a href="../../../others/git_usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Git cheat sheet" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Linear Algebra
+                Git cheat sheet
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -787,12 +855,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "navigation.path", "navigation.indexes", "navigation.top"], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.path", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="js/katex.js"></script>
+        <script src="../../../../js/katex.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
       
