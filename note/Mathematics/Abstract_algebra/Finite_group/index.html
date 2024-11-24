@@ -10,13 +10,13 @@
         <meta name="author" content="Jiang_SY">
       
       
-        <link rel="canonical" href="https://pampaseagle1.github.io/note/Mathematics/Abstract_algebra/Homomorphism/">
+        <link rel="canonical" href="https://pampaseagle1.github.io/note/Mathematics/Abstract_algebra/Finite_group/">
       
       
-        <link rel="prev" href="../Subgroup/">
+        <link rel="prev" href="../Homomorphism/">
       
       
-        <link rel="next" href="../Finite_group/">
+        <link rel="next" href="../Group_action/">
       
       
       <link rel="icon" href="../../../../image/pp.jpg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Homomorphism - Quadratic Reciprocity</title>
+        <title>Finite Group - Quadratic Reciprocity</title>
       
     
     
@@ -128,7 +128,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#isomorphism-theorems" class="md-skip">
+        <a href="#finite-groups" class="md-skip">
           Skip to content
         </a>
       
@@ -163,7 +163,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Homomorphism
+              Finite Group
             
           </span>
         </div>
@@ -526,6 +526,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Homomorphism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homomorphism
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -541,32 +561,12 @@
         
   
   <span class="md-ellipsis">
-    Homomorphism
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Finite_group/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
     Finite Group
   </span>
   
 
       </a>
+      
     </li>
   
 
@@ -741,97 +741,40 @@
                   
 
 
-<h1 id="isomorphism-theorems">Isomorphism Theorems<a class="headerlink" href="#isomorphism-theorems" title="Permanent link">&para;</a></h1>
+<h1 id="finite-groups">Finite groups<a class="headerlink" href="#finite-groups" title="Permanent link">&para;</a></h1>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p><strong>有限生成的阿贝尔群分类定理</strong>
+设 <span class="arithmatex">\(G\)</span> 是一个有限生成的阿贝尔群，则 <span class="arithmatex">\(G \cong \mathbb{Z}^r \times \mathbb{Z}_{n_1}\times\cdots\times\mathbb{Z}_{n_k},k \ge 0,2 \le n_1 \mid n_2 \mid \cdots \mid n_k\)</span>.进一步地，这样的 <span class="arithmatex">\(r,n_1,\ldots,n_k\)</span> 是唯一的.<span class="arithmatex">\(r\)</span> 称为 <span class="arithmatex">\(G\)</span> 的秩(rank)，<span class="arithmatex">\(n_1,\ldots,n_k\)</span> 称为不变因子(invariant factors).</p>
+</div>
+<details class="general">
+<summary>Proof</summary>
+</details>
 <div class="admonition definition">
 <p class="admonition-title">Definition</p>
-<p>如果群<span class="arithmatex">\(G\)</span>的子群<span class="arithmatex">\(H\)</span>满足：<span class="arithmatex">\(\forall a\in G\)</span>，有<span class="arithmatex">\(aH=Ha\)</span>，则称<span class="arithmatex">\(H\)</span>是<span class="arithmatex">\(G\)</span>的正规子群，记作<span class="arithmatex">\(H \triangleleft G\)</span>.</p>
+<p>若 <span class="arithmatex">\(G \cong \mathbb{Z}^r\)</span>，则 <span class="arithmatex">\(G\)</span> 是一个有限生成的自由阿贝尔群.</p>
 </div>
 <div class="admonition proposition">
 <p class="admonition-title">Proposition</p>
-<p>群<span class="arithmatex">\(G\)</span>的子群<span class="arithmatex">\(H\)</span>是正规子群当且仅当<span class="arithmatex">\(aHa^{-1}=H,\forall a\in G\)</span>.</p>
-<p>群<span class="arithmatex">\(G\)</span>的子群<span class="arithmatex">\(H\)</span>是正规子群当且仅当<span class="arithmatex">\(aHa^{-1}\subseteq H,\forall a\in G\)</span>.</p>
-</div>
-<p>受上述命题的启发，我们考虑以下命题：</p>
-<div class="admonition proposition">
-<p class="admonition-title">Proposition</p>
-<p>设<span class="arithmatex">\(H\)</span>为群<span class="arithmatex">\(G\)</span>的一个子群，任取<span class="arithmatex">\(a\in G\)</span>，则<span class="arithmatex">\(aHa^{-1}\)</span>也是<span class="arithmatex">\(G\)</span>的一个子群，称它为<span class="arithmatex">\(H\)</span>的一个共轭子群.</p>
-</div>
-<details class="general">
-<summary>Proof</summary>
-<p>对于 <span class="arithmatex">\(\forall ah_1a^{-1},ah_2a^{-1} \in aHa^{-1}\)</span>，<span class="arithmatex">\((ah_1a^{-1})(ah_2a^{-1})^{-1}=a(h_1h_2)a^{-1} \in aHa^{-1}.\)</span></p>
-</details>
-<div class="admonition proposition">
-<p class="admonition-title">Proposition</p>
-<p>设<span class="arithmatex">\(H\)</span>是群<span class="arithmatex">\(G\)</span>的子群，若<span class="arithmatex">\([G:H]=2\)</span>，则<span class="arithmatex">\(H \triangleleft G\)</span>.</p>
-</div>
-<details class="general">
-<summary>Proof</summary>
-<p>任取<span class="arithmatex">\(a\in G\)</span>，</p>
-<p>若<span class="arithmatex">\(a \notin H\)</span>，则<span class="arithmatex">\(G=H \bigcup aH=H \bigcup Ha\)</span>，从而<span class="arithmatex">\(aH=Ha\)</span>.</p>
-<p>若<span class="arithmatex">\(a \in H\)</span>，则<span class="arithmatex">\(aH=H=Ha\)</span>.</p>
-</details>
-<p>设<span class="arithmatex">\(N \triangleleft G\)</span>，则<span class="arithmatex">\((G/N)_l=(G/N)_r\)</span>，记作<span class="arithmatex">\(G/N\)</span>，在<span class="arithmatex">\(G/N\)</span>中规定<span class="arithmatex">\((aN)(bN):=abN\)</span>，对于<span class="arithmatex">\(aN=cN,bN=dN\)</span>，有<span class="arithmatex">\(c^{-1}a\in N,d^{-1}b \in N\)</span>，从而</p>
-<div class="arithmatex">\[(cd)^{-1}(ab)=d^{-1}c^{-1}ab\in d^{-1}Nb=d^{-1}bN=N.\]</div>
-<p>这表明我们规定的运算是合理的.不难验证商集<span class="arithmatex">\(G/N\)</span>对于这种运算构成一个群，称为<span class="arithmatex">\(G\)</span>对于它正规子群<span class="arithmatex">\(N\)</span>的商群.</p>
-<div class="admonition proposition">
-<p class="admonition-title">Proposition</p>
-<p>设<span class="arithmatex">\(G\)</span>为有限群，<span class="arithmatex">\(N \triangleleft G\)</span>，则 <span class="arithmatex">\(|G/N|=[G:N]=\dfrac{|G|}{|N|}.\)</span></p>
-</div>
-<div class="admonition proposition">
-<p class="admonition-title">Proposition</p>
-<p>设<span class="arithmatex">\(N\)</span>是群<span class="arithmatex">\(G\)</span>的一个正规子群，令</p>
-<div class="arithmatex">\[\pi:G \rightarrow G/N\]</div>
-<div class="arithmatex">\[a \mapsto aN\]</div>
-<p>则<span class="arithmatex">\(\pi\)</span>是群<span class="arithmatex">\(G\)</span>到<span class="arithmatex">\(G/N\)</span>的一个满同态，<span class="arithmatex">\(\operatorname{Ker} \pi=N\)</span>，<span class="arithmatex">\(\pi\)</span>称为自然同态或标准同态.</p>
+<p><span class="arithmatex">\(\mid G \mid &lt;\infty \iff r=0\)</span>.</p>
 </div>
 <div class="admonition theorem">
 <p class="admonition-title">Theorem</p>
-<p><strong>群同构第一定理</strong> 设<span class="arithmatex">\(\sigma\)</span>是群<span class="arithmatex">\(G\)</span>到群<span class="arithmatex">\(\tilde G\)</span>的一个同态，则<span class="arithmatex">\(\operatorname{Ker} \sigma\)</span>是<span class="arithmatex">\(G\)</span>的一个正规子群，且<span class="arithmatex">\(G/\operatorname{Ker}\sigma \cong \operatorname{Im} \sigma\)</span>.</p>
+<p><strong>中国剩余定理</strong>
+若<span class="arithmatex">\((m,n)=1\)</span>,则 <span class="arithmatex">\(\mathbb{Z}_{mn}\cong \mathbb{Z}_m \times \mathbb{Z}_n\)</span>.特别地，<span class="arithmatex">\(\mathbb{Z}_{{p_1}^{r_1}\times\cdots\times{p_k}^{r_k}}\cong \mathbb{Z}_{{p_1}^{r_1}}\times\cdots\times\mathbb{Z}_{{p_k}^{r_k}}\)</span></p>
 </div>
 <details class="general">
 <summary>Proof</summary>
-<p>先证明<span class="arithmatex">\(\operatorname{Ker} \sigma \triangleleft G\)</span>.</p>
-<p>事实上，对 <span class="arithmatex">\(\forall a \in G,x\in \operatorname{Ker}\sigma\)</span>，<span class="arithmatex">\(\sigma(axa^{-1})=\sigma(a)\cdot\sigma(x)\cdot\sigma(a^{-1})=\sigma(a)\cdot\sigma(a^{-1})=\sigma(a \cdot a^{-1})=e\)</span>，</p>
-<p>故<span class="arithmatex">\(axa^{-1}\in \operatorname{Ker}\sigma\)</span>，从而<span class="arithmatex">\(a(\operatorname{Ker}\sigma) a^{-1}\subseteq \operatorname{Ker}\sigma,\operatorname{Ker} \sigma \triangleleft G\)</span>.</p>
-<p>考虑映射</p>
-<div class="arithmatex">\[f:G/\operatorname{Ker}\sigma \rightarrow \operatorname{Im}\sigma\]</div>
-<div class="arithmatex">\[a\operatorname{Ker}\sigma \mapsto \sigma(a).\]</div>
-<p>由于<span class="arithmatex">\(\operatorname{Ker}f=\set{a\operatorname{Ker}\sigma \mid \sigma(a)=e}=\set{a\operatorname{Ker}\sigma \mid a\in \operatorname{Ker}\sigma}=\operatorname{Ker}\sigma\)</span>，故<span class="arithmatex">\(f\)</span>是单的，<span class="arithmatex">\(f\)</span>显然也是满的，故<span class="arithmatex">\(f\)</span>是双射，从而<span class="arithmatex">\(G/\operatorname{Ker}\sigma \cong \operatorname{Im} \sigma\)</span>.</p>
+<p>考虑映射<span class="arithmatex">\(\varphi\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\(\mathbb{Z}/mn\mathbb{Z} \rightarrow \mathbb{Z}/m\mathbb{Z}\times\mathbb{Z}/n\mathbb{Z}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(a \space mod\space(mn) \mapsto (a\space mod\space m,a\space mod\space n)\)</span>\)</span>
+则 <span class="arithmatex">\(\varphi\)</span> 是一个群同态.
+<span class="arithmatex">\(a\space mod \space mn \in \ker \varphi \iff m \mid a,n \mid a \iff mn \mid a\)</span>，从而知 <span class="arithmatex">\(\ker \varphi=\{0 \space mod\space mn\}\)</span>，<span class="arithmatex">\(\varphi\)</span> 为单射.进而知 <span class="arithmatex">\(\varphi\)</span> 是同构.</p>
 </details>
-<div class="admonition theorem">
-<p class="admonition-title">Theorem</p>
-<p><strong>群同构第二定理</strong> 设<span class="arithmatex">\(G\)</span>是一个群，<span class="arithmatex">\(H&lt;G,N\triangleleft G\)</span>，则</p>
-<p>(1) <span class="arithmatex">\(HN&lt;G\)</span>;</p>
-<p>(2) <span class="arithmatex">\(H \cap N \triangleleft H\)</span> ，且<span class="arithmatex">\(H/H \cap N \cong HN/N\)</span>.</p>
+<div class="admonition deduction">
+<p class="admonition-title">Deduction</p>
+<p>每个有限生成的阿贝尔群同构于形如  <span class="arithmatex">\(\mathbb{Z}^r \times \mathbb{Z}_{{p_1}^{r_{11}}}\times \cdots \times \mathbb{Z}_{{p_1}^{r_{1s_1}}}\times\cdots \times \mathbb{Z}_{{p_k}^{r_{k1}}}\times \cdots \times \mathbb{Z}_{{p_k}^{r_{ks_k}}}\)</span>，其中 <span class="arithmatex">\(r,k \ge 0,r_{ij}&gt;0\)</span>，<span class="arithmatex">\({p_1}^{r_11},\ldots,{p_k^{r_ks_k}}\)</span> 在排列的意义下是唯一的，称为初等因子(elementary divisors).</p>
 </div>
-<details class="general">
-<summary>Proof</summary>
-<p>对于 <span class="arithmatex">\(\forall h_1n_1,h_2n_2\in HN\)</span>，<span class="arithmatex">\((h_1n_1)(h_2n_2)^{-1}=h_1n_1n_2^{-1}h2^{-1}=h_1n_1h_2^{-1}n_3=h_1h_2^{-1}n_4n_3\in HN\)</span>，从而<span class="arithmatex">\(HN&lt;G\)</span>.</p>
-<p>对于<span class="arithmatex">\(\forall a\in H,aha^{-1} \in a(H\cap N)a^{-1}\)</span>，有<span class="arithmatex">\(aha^{-1} \in H,aha^{-1}\in N\)</span> since <span class="arithmatex">\(N \triangleleft G\)</span>，</p>
-<p>从而 <span class="arithmatex">\(aha^{-1} \in H\cap N\)</span>，故<span class="arithmatex">\(H \cap N \triangleleft H\)</span>.</p>
-<p>考虑映射 </p>
-<div class="arithmatex">\[f:H\rightarrow HN/N\]</div>
-<div class="arithmatex">\[a \mapsto aN,\]</div>
-<p>显然<span class="arithmatex">\(f\)</span>是满的，<span class="arithmatex">\(\operatorname{Im}f=HN/N\)</span>，<span class="arithmatex">\(\operatorname{Ker}f=\set{a \in H\mid aN=N}=H \cap N\)</span>，从而由群同构第一定理知：<span class="arithmatex">\(H/H \cap N \cong HN/N\)</span>.</p>
-</details>
-<div class="admonition theorem">
-<p class="admonition-title">Theorem</p>
-<p><strong>群同构第三定理</strong> 设<span class="arithmatex">\(G\)</span>是一个群，<span class="arithmatex">\(N\triangleleft G\)</span>，<span class="arithmatex">\(H\)</span>是<span class="arithmatex">\(G\)</span>的包含<span class="arithmatex">\(N\)</span>的正规子群，则<span class="arithmatex">\(H/N \triangleleft G/N\)</span>，且<span class="arithmatex">\((G/N)/(H/N)\cong G/H\)</span>.</p>
-</div>
-<details class="general">
-<summary>Proof</summary>
-<p>对于 <span class="arithmatex">\(\forall gN \in G/N\)</span>，</p>
-<div class="arithmatex">\[\begin{aligned}
-(gN)(hN)(gN)^{-1}=(gN)(hN)(g^{-1}N)=(Ng)(hg^{-1})N \\
-=Nh'N=h'N\in H/N，
-\end{aligned}\]</div>
-<p>从而<span class="arithmatex">\(H/N \triangleleft G/N\)</span>.</p>
-<p>考虑映射 </p>
-<div class="arithmatex">\[f:G/N \rightarrow G/H\]</div>
-<div class="arithmatex">\[aN \mapsto aH,\]</div>
-<p>则<span class="arithmatex">\(\operatorname{Im}f=aH,\operatorname{Ker}f=\set{aN\mid aH=H}=\set{aN|a\in H}=H/N\)</span>.</p>
-<p>从而由群同构第一定理，有<span class="arithmatex">\((G/N)/(H/N)\cong G/H\)</span>.</p>
-</details>
 
 
 
@@ -859,7 +802,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Subgroup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Subgroup" rel="prev">
+          <a href="../Homomorphism/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Homomorphism" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -869,20 +812,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Subgroup
+                Homomorphism
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Finite_group/" class="md-footer__link md-footer__link--next" aria-label="Next: Finite Group" rel="next">
+          <a href="../Group_action/" class="md-footer__link md-footer__link--next" aria-label="Next: Group Action" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Finite Group
+                Group Action
               </div>
             </div>
             <div class="md-footer__button md-icon">

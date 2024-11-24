@@ -10,13 +10,13 @@
         <meta name="author" content="Jiang_SY">
       
       
-        <link rel="canonical" href="https://pampaseagle1.github.io/note/Mathematics/Abstract_algebra/Homomorphism/">
+        <link rel="canonical" href="https://pampaseagle1.github.io/note/Mathematics/Abstract_algebra/Group_action/">
       
       
-        <link rel="prev" href="../Subgroup/">
+        <link rel="prev" href="../Finite_group/">
       
       
-        <link rel="next" href="../Finite_group/">
+        <link rel="next" href="../../../others/git_usage/">
       
       
       <link rel="icon" href="../../../../image/pp.jpg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Homomorphism - Quadratic Reciprocity</title>
+        <title>Group Action - Quadratic Reciprocity</title>
       
     
     
@@ -128,7 +128,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#isomorphism-theorems" class="md-skip">
+        <a href="#group-action-on-sets" class="md-skip">
           Skip to content
         </a>
       
@@ -163,7 +163,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Homomorphism
+              Group Action
             
           </span>
         </div>
@@ -526,18 +526,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Homomorphism/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +537,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -576,9 +566,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Group_action/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -587,6 +586,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -741,96 +741,178 @@
                   
 
 
-<h1 id="isomorphism-theorems">Isomorphism Theorems<a class="headerlink" href="#isomorphism-theorems" title="Permanent link">&para;</a></h1>
+<h1 id="group-action-on-sets">Group action on sets<a class="headerlink" href="#group-action-on-sets" title="Permanent link">&para;</a></h1>
 <div class="admonition definition">
 <p class="admonition-title">Definition</p>
-<p>如果群<span class="arithmatex">\(G\)</span>的子群<span class="arithmatex">\(H\)</span>满足：<span class="arithmatex">\(\forall a\in G\)</span>，有<span class="arithmatex">\(aH=Ha\)</span>，则称<span class="arithmatex">\(H\)</span>是<span class="arithmatex">\(G\)</span>的正规子群，记作<span class="arithmatex">\(H \triangleleft G\)</span>.</p>
+<p>设 <span class="arithmatex">\(G\)</span> 是一个群,<span class="arithmatex">\(X\)</span> 是一个集合，<span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(X\)</span> 上的（左）作用是一个映射：<span class="arithmatex">\(G \times X \rightarrow X\)</span>，
+<span class="arithmatex">\((g,x) \mapsto g\cdot x\)</span>，
+使得 </p>
+<p>(1) <span class="arithmatex">\(e\cdot x=x,\forall x \in X\)</span>.</p>
+<p>(2) <span class="arithmatex">\(g\cdot(h\cdot x)=(g\cdot h)\cdot x,\forall g,h \in G,x \in X\)</span>.</p>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p><span class="arithmatex">\(\varphi_g:X \rightarrow X:x \mapsto g\cdot x\)</span>.
+则 <span class="arithmatex">\(\varphi_e=id_X\)</span>，<span class="arithmatex">\(\varphi\)</span> 是一个有逆 <span class="arithmatex">\(\varphi_{g^{-1}}\)</span> 的双射.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="arithmatex">\(\varphi_g \varphi_h(x)=g\cdot(h\cdot x)=(gh)\cdot x=\varphi_{gh}(x)\)</span>.从而 <span class="arithmatex">\(\varphi_g\varphi_h=\varphi_{gh},\varphi_g\varphi_{g^{-1}}=\varphi_{g^{-1}}\varphi_{g}=\varphi_e=id_X\)</span>，这表明 <span class="arithmatex">\(\varphi_g\)</span> 是 <span class="arithmatex">\(X\)</span> 上的双射.</p>
 </div>
 <div class="admonition proposition">
 <p class="admonition-title">Proposition</p>
-<p>群<span class="arithmatex">\(G\)</span>的子群<span class="arithmatex">\(H\)</span>是正规子群当且仅当<span class="arithmatex">\(aHa^{-1}=H,\forall a\in G\)</span>.</p>
-<p>群<span class="arithmatex">\(G\)</span>的子群<span class="arithmatex">\(H\)</span>是正规子群当且仅当<span class="arithmatex">\(aHa^{-1}\subseteq H,\forall a\in G\)</span>.</p>
-</div>
-<p>受上述命题的启发，我们考虑以下命题：</p>
-<div class="admonition proposition">
-<p class="admonition-title">Proposition</p>
-<p>设<span class="arithmatex">\(H\)</span>为群<span class="arithmatex">\(G\)</span>的一个子群，任取<span class="arithmatex">\(a\in G\)</span>，则<span class="arithmatex">\(aHa^{-1}\)</span>也是<span class="arithmatex">\(G\)</span>的一个子群，称它为<span class="arithmatex">\(H\)</span>的一个共轭子群.</p>
+<p>设 <span class="arithmatex">\(G\)</span> 有在 <span class="arithmatex">\(X\)</span> 上的作用，则有群同态 <span class="arithmatex">\(G \rightarrow S_X:\)</span>
+<span class="arithmatex">\(g\mapsto \varphi_g\)</span>.</p>
 </div>
 <details class="general">
 <summary>Proof</summary>
-<p>对于 <span class="arithmatex">\(\forall ah_1a^{-1},ah_2a^{-1} \in aHa^{-1}\)</span>，<span class="arithmatex">\((ah_1a^{-1})(ah_2a^{-1})^{-1}=a(h_1h_2)a^{-1} \in aHa^{-1}.\)</span></p>
+<p>即证：<span class="arithmatex">\(\varphi_g \varphi_h=\varphi_{gh}\)</span>.
+代入验证即可：对于 <span class="arithmatex">\(\forall x \in X\)</span>，<span class="arithmatex">\(\varphi_g(\varphi_h(x))=\varphi_g(h\cdot x)=g\cdot(h\cdot x)=(g\cdot h)\cdot x=\varphi_{gh}(x)\)</span>，从而 <span class="arithmatex">\(\varphi_g \varphi_h=\varphi_{gh}\)</span>.</p>
 </details>
-<div class="admonition proposition">
-<p class="admonition-title">Proposition</p>
-<p>设<span class="arithmatex">\(H\)</span>是群<span class="arithmatex">\(G\)</span>的子群，若<span class="arithmatex">\([G:H]=2\)</span>，则<span class="arithmatex">\(H \triangleleft G\)</span>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>几种 <span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(G\)</span> 上的作用</p>
+<p>左平移：<span class="arithmatex">\(l_g:x \mapsto gx,x \in G\)</span>.</p>
+<p>右平移：<span class="arithmatex">\(r_g:x \mapsto xg^{-1},x \in G\)</span>.</p>
+<p>Note: <span class="arithmatex">\(l_g r_{g'}=r_{g'} l_g\)</span>.</p>
+<p>共轭作用(conjugation action)：<span class="arithmatex">\(Ad_g:x\mapsto gxg^{-1}\)</span>.</p>
+<p>Fact:<span class="arithmatex">\(Ad_g=l_g r_g\)</span>.</p>
 </div>
-<details class="general">
-<summary>Proof</summary>
-<p>任取<span class="arithmatex">\(a\in G\)</span>，</p>
-<p>若<span class="arithmatex">\(a \notin H\)</span>，则<span class="arithmatex">\(G=H \bigcup aH=H \bigcup Ha\)</span>，从而<span class="arithmatex">\(aH=Ha\)</span>.</p>
-<p>若<span class="arithmatex">\(a \in H\)</span>，则<span class="arithmatex">\(aH=H=Ha\)</span>.</p>
-</details>
-<p>设<span class="arithmatex">\(N \triangleleft G\)</span>，则<span class="arithmatex">\((G/N)_l=(G/N)_r\)</span>，记作<span class="arithmatex">\(G/N\)</span>，在<span class="arithmatex">\(G/N\)</span>中规定<span class="arithmatex">\((aN)(bN):=abN\)</span>，对于<span class="arithmatex">\(aN=cN,bN=dN\)</span>，有<span class="arithmatex">\(c^{-1}a\in N,d^{-1}b \in N\)</span>，从而</p>
-<div class="arithmatex">\[(cd)^{-1}(ab)=d^{-1}c^{-1}ab\in d^{-1}Nb=d^{-1}bN=N.\]</div>
-<p>这表明我们规定的运算是合理的.不难验证商集<span class="arithmatex">\(G/N\)</span>对于这种运算构成一个群，称为<span class="arithmatex">\(G\)</span>对于它正规子群<span class="arithmatex">\(N\)</span>的商群.</p>
-<div class="admonition proposition">
-<p class="admonition-title">Proposition</p>
-<p>设<span class="arithmatex">\(G\)</span>为有限群，<span class="arithmatex">\(N \triangleleft G\)</span>，则 <span class="arithmatex">\(|G/N|=[G:N]=\dfrac{|G|}{|N|}.\)</span></p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>一个从群 <span class="arithmatex">\(G\)</span> 到 <span class="arithmatex">\(G\)</span> 的同构 <span class="arithmatex">\(\varphi\)</span> 称为群 <span class="arithmatex">\(G\)</span> 的自同构(outomorphism).<span class="arithmatex">\(Aut(G):=\{isomorphism\space\varphi:G\rightarrow G\}\)</span> 称为 <span class="arithmatex">\(G\)</span> 的自同构群(automorphism group of <span class="arithmatex">\(G\)</span>).</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>群 <span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(X\)</span> 上的右作用是一个映射 <span class="arithmatex">\(X\times G \rightarrow X\)</span>,<span class="arithmatex">\((x,g)\mapsto x\cdot g\)</span>，满足 <span class="arithmatex">\(x\cdot e=x,(x\cdot g)\cdot h=x\cdot(g\cdot h)\)</span>.</p>
 </div>
 <div class="admonition proposition">
 <p class="admonition-title">Proposition</p>
-<p>设<span class="arithmatex">\(N\)</span>是群<span class="arithmatex">\(G\)</span>的一个正规子群，令</p>
-<div class="arithmatex">\[\pi:G \rightarrow G/N\]</div>
-<div class="arithmatex">\[a \mapsto aN\]</div>
-<p>则<span class="arithmatex">\(\pi\)</span>是群<span class="arithmatex">\(G\)</span>到<span class="arithmatex">\(G/N\)</span>的一个满同态，<span class="arithmatex">\(\operatorname{Ker} \pi=N\)</span>，<span class="arithmatex">\(\pi\)</span>称为自然同态或标准同态.</p>
+<p><span class="arithmatex">\(Ad_g\)</span> 是群 <span class="arithmatex">\(G\)</span> 的自同构.从而 <span class="arithmatex">\(Ad:G\rightarrow Aug(G)&lt;S_G\)</span>.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>设群 <span class="arithmatex">\(G\)</span> 在集合 <span class="arithmatex">\(X\)</span> 上的作用给出一个同态 <span class="arithmatex">\(\phi:G\rightarrow S_X,g \mapsto \phi_g\)</span>.
+(1)我们称这个作用是忠实的(faithful)，如果 <span class="arithmatex">\(\phi\)</span> 是单的.
+(等价地，<span class="arithmatex">\(\phi_g\)</span> 固定每一个 <span class="arithmatex">\(x \implies g=e\)</span>.)</p>
+<p>(2)我们称这个作用是平凡的(trival)，如果 <span class="arithmatex">\(\phi\)</span> 是平凡的，<span class="arithmatex">\(i.e. \phi_g=id_x,\forall g\in G\)</span>.</p>
 </div>
 <div class="admonition theorem">
 <p class="admonition-title">Theorem</p>
-<p><strong>群同构第一定理</strong> 设<span class="arithmatex">\(\sigma\)</span>是群<span class="arithmatex">\(G\)</span>到群<span class="arithmatex">\(\tilde G\)</span>的一个同态，则<span class="arithmatex">\(\operatorname{Ker} \sigma\)</span>是<span class="arithmatex">\(G\)</span>的一个正规子群，且<span class="arithmatex">\(G/\operatorname{Ker}\sigma \cong \operatorname{Im} \sigma\)</span>.</p>
+<p><strong>Cayley Theorem</strong>
+(1) 每个群都同构于一个循环群的子群.</p>
+<p>(2)若群 <span class="arithmatex">\(G\)</span> 的阶 <span class="arithmatex">\(n&lt;\infty\)</span>，则 <span class="arithmatex">\(G\)</span> 同构于 <span class="arithmatex">\(S_n\)</span> 的一个子群.</p>
 </div>
 <details class="general">
 <summary>Proof</summary>
-<p>先证明<span class="arithmatex">\(\operatorname{Ker} \sigma \triangleleft G\)</span>.</p>
-<p>事实上，对 <span class="arithmatex">\(\forall a \in G,x\in \operatorname{Ker}\sigma\)</span>，<span class="arithmatex">\(\sigma(axa^{-1})=\sigma(a)\cdot\sigma(x)\cdot\sigma(a^{-1})=\sigma(a)\cdot\sigma(a^{-1})=\sigma(a \cdot a^{-1})=e\)</span>，</p>
-<p>故<span class="arithmatex">\(axa^{-1}\in \operatorname{Ker}\sigma\)</span>，从而<span class="arithmatex">\(a(\operatorname{Ker}\sigma) a^{-1}\subseteq \operatorname{Ker}\sigma,\operatorname{Ker} \sigma \triangleleft G\)</span>.</p>
-<p>考虑映射</p>
-<div class="arithmatex">\[f:G/\operatorname{Ker}\sigma \rightarrow \operatorname{Im}\sigma\]</div>
-<div class="arithmatex">\[a\operatorname{Ker}\sigma \mapsto \sigma(a).\]</div>
-<p>由于<span class="arithmatex">\(\operatorname{Ker}f=\set{a\operatorname{Ker}\sigma \mid \sigma(a)=e}=\set{a\operatorname{Ker}\sigma \mid a\in \operatorname{Ker}\sigma}=\operatorname{Ker}\sigma\)</span>，故<span class="arithmatex">\(f\)</span>是单的，<span class="arithmatex">\(f\)</span>显然也是满的，故<span class="arithmatex">\(f\)</span>是双射，从而<span class="arithmatex">\(G/\operatorname{Ker}\sigma \cong \operatorname{Im} \sigma\)</span>.</p>
+<p>考虑 <span class="arithmatex">\(G\)</span> 上的左平移，它给出一个从 <span class="arithmatex">\(G\rightarrow S_G\)</span> 的单射.从而 <span class="arithmatex">\(G\)</span> 同构于 <span class="arithmatex">\(S_G\)</span> 的子群.</p>
 </details>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>设 <span class="arithmatex">\(G\)</span> 作用在 <span class="arithmatex">\(X\)</span> 上，对于 <span class="arithmatex">\(x\in X\)</span>，我们定义：
+(1) <span class="arithmatex">\(Stab_G(x)=\{g\in G:gx=x\} \subset G\)</span> 称为 <span class="arithmatex">\(x\)</span> 的稳定子群(stabilizer subgroup).</p>
+<p>(2) <span class="arithmatex">\(Orb_G(x)=G\cdot x=\{gx:g\in G\}\subset X\)</span> 称为 <span class="arithmatex">\(x\)</span> 的轨道(orbit).</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>(1) <span class="arithmatex">\(Stab_G(x)&lt;G\)</span>.</p>
+<p>(2) 若 <span class="arithmatex">\(G\cdot x \cap G\cdot y \neq \emptyset\)</span>，则 <span class="arithmatex">\(G\cdot x=G \cdot y\)</span>.</p>
+<p>(3) 若 <span class="arithmatex">\(y=g\cdot x\)</span>，（即 <span class="arithmatex">\(x,y \in Orbit O\)</span>），则 <span class="arithmatex">\(Stab_G(y)=gStab_G(x)g^{-1}\)</span>.</p>
+</div>
+<details class="general">
+<summary>Proof</summary>
+<p>(1) 设 <span class="arithmatex">\(g,h\in Stab_G(x)\)</span>，我们证明 <span class="arithmatex">\(gh^{-1}\in Stab_G(x)\)</span>.
+事实上，由 <span class="arithmatex">\(hx=x\)</span> 可知 <span class="arithmatex">\(h^{-1}x=h^{-1}(h\cdot x)=(h^{-1}h)\cdot x=x\)</span>，从而 <span class="arithmatex">\((gh^{-1})\cdot x=g\cdot(h^{-1}x)=g\cdot(x)=x,gh^{-1}\in Stab_G(x)\)</span>.
+(2)假设 <span class="arithmatex">\(z=gx=hy,g,h\in G\)</span>，则对于 <span class="arithmatex">\(\forall k\in G,kx=k(g^{-1}h\cdot y)=(kg^{-1}h)\cdot y\in G\cdot y\)</span>.从而 <span class="arithmatex">\(G\cdot x \subset G\cdot y\)</span>.同理有 <span class="arithmatex">\(G\cdot y\subset G\cdot x\)</span>.故 <span class="arithmatex">\(G\cdot x=G\cdot y\)</span>.
+(3) <span class="arithmatex">\(h\in Stab_G(x) \iff h\cdot x=x \iff ghg^{-1}\cdot gx=gx\iff ghg^{-1}\cdot y=y\iff ghg^{-1} \in Stab_G(y)\)</span>.</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>考虑群 <span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(G\)</span> 上的共轭作用，对于 <span class="arithmatex">\(x \in G,G\cdot x=\{gxg^{-1}:g\in G\}\)</span> 称为 <span class="arithmatex">\(x\)</span> 的共轭类.<span class="arithmatex">\(Stab_G(x)=\{g\in G,gxg^{-1}=x\}=\{g\in G:gx=xg\}:=C_G(x)(or\space G_x)\)</span> 称为 <span class="arithmatex">\(x\)</span> 的中心化子(centralizer).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>群 <span class="arithmatex">\(G\)</span> 是一系列共轭类的不交并.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>(1) 若 <span class="arithmatex">\(G\)</span> 是阿贝尔群，则 <span class="arithmatex">\(x\)</span> 的共轭类为 <span class="arithmatex">\(\{x\}\)</span>.</p>
+<p>(2) <span class="arithmatex">\(GL_n(\mathbb{C})\)</span> 的共轭类与可逆的Jordan标准型一一对应.</p>
+<p>(3) <span class="arithmatex">\(S_n\)</span> 的共轭类和 <span class="arithmatex">\(n\)</span> 的划分一一对应.下面给出证明.</p>
+</div>
+<details class="general">
+<summary>Proof</summary>
+<p>对于 <span class="arithmatex">\(\sigma \in S_n\)</span>，我们可以写出 <span class="arithmatex">\(\sigma=(\sigma_{1,1}\sigma_{1,2}\ldots\sigma_{1,r_1})\cdots(\sigma_{t,1}\sigma_{t,2}\ldots\sigma_{t,r_t})\)</span>.
+每个<span class="arithmatex">\(cycle\)</span>的长度对应一个正整数，则这样的 <span class="arithmatex">\(\sigma\)</span> 恰好对应 <span class="arithmatex">\(n\)</span> 的一种划分.
+对于 <span class="arithmatex">\(\forall \tau \in S_n\)</span>，考虑 <span class="arithmatex">\(\tau \sigma \tau^{-1}\)</span>，容易证明：<span class="arithmatex">\(\tau (\sigma_{1,1}\sigma_{1,2}\ldots\sigma_{1,r_1})\cdots(\sigma_{t,1}\sigma_{t,2}\ldots\sigma_{t,r_t})\tau^{-1}=(\tau(\sigma_{1,1})\tau(\sigma_{1,2})\ldots\tau(\sigma_{1,r_1}))\cdots\tau((\sigma_{t,1})\tau(\sigma_{t,2})\ldots\tau(\sigma_{t,r_t}))\)</span>.这表明 <span class="arithmatex">\(\sigma\)</span> 的共轭类对应 <span class="arithmatex">\(n\)</span> 的同一种划分.从而命题得证.</p>
+</details>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>若 <span class="arithmatex">\(\tau_1,\tau_2 \in S_n\)</span> 有相同类型的环分解，则 <span class="arithmatex">\(\exist \sigma\in S_n,s.t.\sigma\tau_1\sigma^{-1}=\tau_2\)</span>.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>设 <span class="arithmatex">\(H&lt;G\)</span>，<span class="arithmatex">\(S \subset G\)</span>，
+(1) <span class="arithmatex">\(C_G(S)=\{g\in G:gs=sg,\forall s\in S\}=\displaystyle\bigcap_{s\in S}C_G(s)\)</span> 称为 <span class="arithmatex">\(S\)</span> 的中心化子.<span class="arithmatex">\(Z(G):=C_G(G)=\{g\in G:gx=xg,\forall x\in G\}=\ker(Ad:G\rightarrow S_G)\)</span>.</p>
+<p>(2) 对于群 <span class="arithmatex">\(G\)</span>，设 <span class="arithmatex">\(X\)</span> 是 <span class="arithmatex">\(G\)</span> 所有子群的集合，考虑 <span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(X\)</span> 上的作用，<span class="arithmatex">\(Ad_g:X\rightarrow X:H\mapsto gHg^{-1}\)</span>.则 <span class="arithmatex">\(N_G(H):=Stab_G(H)=\{g\in G:gHg^{-1}=H\}\)</span> 称为 <span class="arithmatex">\(H\)</span> 的正规化子(Normalizer).</p>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>(1) <span class="arithmatex">\(C_G(H) &lt; N_G(H)\)</span>.
+(2) <span class="arithmatex">\(H \triangleleft N_G(H)\)</span>.</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p><span class="arithmatex">\(Z(G)\)</span> 是阿贝尔群.</p>
+</div>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p><span class="arithmatex">\(g\in G\)</span> 的共轭类是单点集 <span class="arithmatex">\(\{g\}\iff g\in Z(G)\)</span>.</p>
+</div>
+<details class="general">
+<summary>Proof</summary>
+<p><span class="arithmatex">\(Ad(G)(g)=\{xgx^{-1}:x\in G\}=\{g\}\iff xgx^{-1}=g,\forall x\in G\iff xg=gx,\forall x\in G\iff g\in Z(G)\)</span>.</p>
+</details>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>我们称 <span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(X\)</span> 上的作用是传递的(transitive)，如果 <span class="arithmatex">\(\forall x,y \in X,\exist g\in G,s.t.g\cdot x=y\iff X\)</span> 是一个轨道 <span class="arithmatex">\(\iff X=G\cdot x,\forall x\in X\)</span>.</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>若 <span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(X\)</span> 上的作用是可迁的，则对于 <span class="arithmatex">\(\forall x\in X\)</span>，有双射 <span class="arithmatex">\(\varphi:G/G_x\rightarrow X,gG_x\mapsto g\cdot x\)</span></p>
+</div>
+<details class="general">
+<summary>Proof</summary>
+<p>我们先说明 <span class="arithmatex">\(\varphi\)</span> 是良定义的.若 <span class="arithmatex">\(gG_x=g'G_x\)</span>，则 <span class="arithmatex">\(\exist h\in G_x,s.t.g'=gh\)</span>，从而 <span class="arithmatex">\(g'\cdot x=gh\cdot x=gx\)</span>.</p>
+<p>下面证明 <span class="arithmatex">\(\varphi\)</span> 是双射.由于 <span class="arithmatex">\(\ker\varphi=\{gG_x\in G/G_x:g\cdot x=e\cdot x=x\}=\{gG_x:g\in G_x\}=eG_x\)</span>，从而 <span class="arithmatex">\(\varphi\)</span> 是单射.</p>
+<p>由于 <span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(X\)</span> 上的作用可迁，故对 <span class="arithmatex">\(\forall y\in X,\exist g\in G,s.t.g\cdot x=y\)</span>，从而 <span class="arithmatex">\(\varphi(gG_x)=y\)</span>，这表明 <span class="arithmatex">\(\varphi\)</span> 为满射.综上知 <span class="arithmatex">\(\varphi\)</span> 为双射.</p>
+</details>
+<div class="admonition collary">
+<p class="admonition-title">Collary</p>
+<p>若 <span class="arithmatex">\(G\)</span> 在 <span class="arithmatex">\(X\)</span> 上的作用可迁，则 <span class="arithmatex">\(|X|=|G/G_x|=[G:G_x]\)</span>.</p>
+<p>更一般地，<span class="arithmatex">\(|X|=\displaystyle\sum|G\cdot x|=\displaystyle\sum_{G-orbit}[G:G_x]\)</span>。</p>
+</div>
 <div class="admonition theorem">
 <p class="admonition-title">Theorem</p>
-<p><strong>群同构第二定理</strong> 设<span class="arithmatex">\(G\)</span>是一个群，<span class="arithmatex">\(H&lt;G,N\triangleleft G\)</span>，则</p>
-<p>(1) <span class="arithmatex">\(HN&lt;G\)</span>;</p>
-<p>(2) <span class="arithmatex">\(H \cap N \triangleleft H\)</span> ，且<span class="arithmatex">\(H/H \cap N \cong HN/N\)</span>.</p>
+<p>(1) 对于 <span class="arithmatex">\(x\in G\)</span>，<span class="arithmatex">\(|Ad(G)\cdot x|=[G:C_G(x)]\)</span>.</p>
+<p>(2) <strong>class function</strong>:若 <span class="arithmatex">\(g_1,\ldots,g_r\)</span> 是非单点集的共轭类的代表元，则 <span class="arithmatex">\(|G|=|Z(G)|+\displaystyle\sum_{i=1}^{r}[G:C_G(g_i)]=|Z(G)|+\displaystyle\sum_{i=1}^{r}\dfrac{G}{C_G(g_i)}\)</span>.</p>
 </div>
 <details class="general">
 <summary>Proof</summary>
-<p>对于 <span class="arithmatex">\(\forall h_1n_1,h_2n_2\in HN\)</span>，<span class="arithmatex">\((h_1n_1)(h_2n_2)^{-1}=h_1n_1n_2^{-1}h2^{-1}=h_1n_1h_2^{-1}n_3=h_1h_2^{-1}n_4n_3\in HN\)</span>，从而<span class="arithmatex">\(HN&lt;G\)</span>.</p>
-<p>对于<span class="arithmatex">\(\forall a\in H,aha^{-1} \in a(H\cap N)a^{-1}\)</span>，有<span class="arithmatex">\(aha^{-1} \in H,aha^{-1}\in N\)</span> since <span class="arithmatex">\(N \triangleleft G\)</span>，</p>
-<p>从而 <span class="arithmatex">\(aha^{-1} \in H\cap N\)</span>，故<span class="arithmatex">\(H \cap N \triangleleft H\)</span>.</p>
-<p>考虑映射 </p>
-<div class="arithmatex">\[f:H\rightarrow HN/N\]</div>
-<div class="arithmatex">\[a \mapsto aN,\]</div>
-<p>显然<span class="arithmatex">\(f\)</span>是满的，<span class="arithmatex">\(\operatorname{Im}f=HN/N\)</span>，<span class="arithmatex">\(\operatorname{Ker}f=\set{a \in H\mid aN=N}=H \cap N\)</span>，从而由群同构第一定理知：<span class="arithmatex">\(H/H \cap N \cong HN/N\)</span>.</p>
+<p>(1) 考虑 <span class="arithmatex">\(G/C_G(x)\)</span> 到 <span class="arithmatex">\(Ad(G)(x)\)</span> 的双射.
+(2) <span class="arithmatex">\(|G|=\displaystyle\sum_{Ad(G)(x)的共轭类}[G:C_G(x)]=|Z(G)|+\displaystyle\sum_{i=1}^{r}[G:C_G(g_i)]\)</span>.</p>
 </details>
-<div class="admonition theorem">
-<p class="admonition-title">Theorem</p>
-<p><strong>群同构第三定理</strong> 设<span class="arithmatex">\(G\)</span>是一个群，<span class="arithmatex">\(N\triangleleft G\)</span>，<span class="arithmatex">\(H\)</span>是<span class="arithmatex">\(G\)</span>的包含<span class="arithmatex">\(N\)</span>的正规子群，则<span class="arithmatex">\(H/N \triangleleft G/N\)</span>，且<span class="arithmatex">\((G/N)/(H/N)\cong G/H\)</span>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>我们称群 <span class="arithmatex">\(G\)</span> 是一个 <span class="arithmatex">\(p-\)</span>群，如果 <span class="arithmatex">\(|G|=p^n,n \ge 0\)</span>，<span class="arithmatex">\(p\)</span> 为素数.</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>若 <span class="arithmatex">\(G\)</span> 是一个非平凡的 <span class="arithmatex">\(p-\)</span>群，则 <span class="arithmatex">\(Z(G)\)</span> 也是非平凡的.</p>
 </div>
 <details class="general">
 <summary>Proof</summary>
-<p>对于 <span class="arithmatex">\(\forall gN \in G/N\)</span>，</p>
-<div class="arithmatex">\[\begin{aligned}
-(gN)(hN)(gN)^{-1}=(gN)(hN)(g^{-1}N)=(Ng)(hg^{-1})N \\
-=Nh'N=h'N\in H/N，
-\end{aligned}\]</div>
-<p>从而<span class="arithmatex">\(H/N \triangleleft G/N\)</span>.</p>
-<p>考虑映射 </p>
-<div class="arithmatex">\[f:G/N \rightarrow G/H\]</div>
-<div class="arithmatex">\[aN \mapsto aH,\]</div>
-<p>则<span class="arithmatex">\(\operatorname{Im}f=aH,\operatorname{Ker}f=\set{aN\mid aH=H}=\set{aN|a\in H}=H/N\)</span>.</p>
-<p>从而由群同构第一定理，有<span class="arithmatex">\((G/N)/(H/N)\cong G/H\)</span>.</p>
+<p><span class="arithmatex">\(|G|=|Z(G)|+\displaystyle\sum_{i=1}^{r}[G:C_G(g_i)]\)</span>，而 <span class="arithmatex">\(1 \lt [G:C_G(g_i)] \mid |G|\)</span>，故有 <span class="arithmatex">\(p \mid [G:C_G(g_i)]\)</span>.从而知 <span class="arithmatex">\(p \mid |Z(G)|\)</span>，而 <span class="arithmatex">\(e\in Z(G),|Z(G)| \ge 1\)</span>，这表明 <span class="arithmatex">\(|Z(G)|&gt;1\)</span>，<span class="arithmatex">\(Z(G)\)</span> 是非平凡的.</p>
 </details>
 
 
@@ -859,7 +941,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Subgroup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Subgroup" rel="prev">
+          <a href="../Finite_group/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Finite Group" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -869,20 +951,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Subgroup
+                Finite Group
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Finite_group/" class="md-footer__link md-footer__link--next" aria-label="Next: Finite Group" rel="next">
+          <a href="../../../others/git_usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Git cheat sheet" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Finite Group
+                Git cheat sheet
               </div>
             </div>
             <div class="md-footer__button md-icon">
